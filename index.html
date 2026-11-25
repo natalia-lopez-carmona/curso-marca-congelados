@@ -370,18 +370,11 @@ footer{margin-top:50px;padding:20px;border:2px solid var(--ink);border-radius:18
 @media (max-width:760px){.board{grid-template-columns:minmax(0,1fr)}.board>div{grid-column:auto!important}}
 .board-tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:16px}
 /* contacto */
-.contact-card{display:grid;grid-template-columns:minmax(0,1fr);gap:24px;align-items:center;background:var(--blue);color:#fff;border:3px solid var(--ink);border-radius:28px;padding:34px 30px;box-shadow:8px 8px 0 var(--ink);position:relative;overflow:hidden}
-.contact-card::after{content:"";position:absolute;left:-40px;bottom:-50px;width:170px;height:170px;border-radius:50%;background:radial-gradient(#fff 1.8px,transparent 2px) 0 0/13px 13px;opacity:.3}
-.contact-card h2{margin:16px 0 10px;color:#fff}
-.contact-card p{max-width:56ch;position:relative;z-index:1}
-.contact-card .sticker{color:var(--ink)}
-.cc-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px;position:relative;z-index:1}
-.cc-btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:800;text-transform:uppercase;letter-spacing:.03em;font-size:.88rem;padding:12px 22px;border-radius:99px;border:2px solid var(--ink);background:var(--surface);color:var(--ink);box-shadow:4px 4px 0 var(--ink);transition:transform .15s}
-.cc-btn.primary{background:var(--yellow)}
-.cc-btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
-.cc-btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
-.cc-url{margin-top:12px;font-size:.84rem;opacity:.9}
-@media (max-width:640px){.contact-card{grid-template-columns:minmax(0,1fr);padding:28px 20px}}
+.contact-strip{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin:26px 0 6px;padding:12px 18px;border:2px dashed var(--ink);border-radius:99px;background:var(--surface);font-size:.92rem;scroll-margin-top:90px}
+.contact-strip p{margin:0;flex:1 1 280px}
+.contact-strip a{display:inline-flex;align-items:center;gap:6px;font-weight:800;font-size:.84rem;text-decoration:none;color:var(--ink);background:var(--yellow);border:2px solid var(--ink);border-radius:99px;padding:7px 16px;white-space:nowrap}
+.contact-strip a:hover{box-shadow:3px 3px 0 var(--ink)}
+@media (max-width:640px){.contact-strip{border-radius:18px}}
 .dl-btn{display:none}
 body.dl-on .dl-btn{display:inline-block}
 .restore{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.86rem;border:2px dashed var(--ink);border-radius:99px;padding:8px 16px;background:var(--surface);cursor:pointer}
@@ -499,13 +492,17 @@ body.dl-on .dl-btn{display:inline-block}
       <svg width="170" height="26" viewBox="0 0 170 26" style="margin-top:14px;color:var(--red)" aria-hidden="true"><use href="#d-squig"/></svg>
     </div>
     <div class="blob">
-      <div class="round-badge">Diseño con propósito</div>
       <div class="bags">
         <div class="bag" style="--c:#C4552D;width:128px"><div class="lg-row" style="font-size:.62rem"><svg aria-hidden="true"><use href="#iso"/></svg>Cosecha Lista</div><div class="pname" style="font-size:.95rem">Mezcla para sudado</div><div class="art"><svg viewBox="0 0 120 90" aria-hidden="true"><use href="#art-sudado"/></svg></div><div class="foot"><span class="net">500 g</span></div></div>
         <div class="bag" style="--c:#4E8A2E;width:128px;transform:rotate(4deg)"><div class="lg-row" style="font-size:.62rem"><svg aria-hidden="true"><use href="#iso"/></svg>Cosecha Lista</div><div class="pname" style="font-size:.95rem">Arveja con zanahoria</div><div class="art"><svg viewBox="0 0 120 90" aria-hidden="true"><use href="#art-arveja"/></svg></div><div class="foot"><span class="net">500 g</span></div></div>
       </div>
       <span class="sticker blue">Marca ficticia<br>de ejemplo</span>
     </div>
+  </div>
+
+  <div class="contact-strip" id="contacto">
+    <p><b>Si te gusta este curso…</b> puedo diseñar uno así para tu emprendimiento, equipo o clase.</p>
+    <a href="https://www.linkedin.com/in/natalia-lopez-carmona" target="_blank" rel="noopener">Escríbeme por LinkedIn <span aria-hidden="true">→</span></a>
   </div>
 
   <div class="sec-title"><h2>Cómo funciona</h2><svg width="60" height="40" viewBox="0 0 60 40" aria-hidden="true"><use href="#d-arrow"/></svg></div>
@@ -1837,22 +1834,6 @@ body.dl-on .dl-btn{display:inline-block}
   </div>
   <div class="board" id="board"></div>
   <p class="small muted" style="margin-top:14px">Las tipografías se muestran si escribiste el nombre exacto de una familia de Google Fonts (por ejemplo «Bricolage Grotesque»). Los empaques usan el nombre y el color HEX que escribiste en la plantilla de arquitectura de marca (Módulo 11). El tablero se descarga como archivo HTML: ábrelo en tu navegador y, si quieres un PDF, usa Imprimir → Guardar como PDF.</p>
-</section>
-
-<!-- ============ CONTACTO ============ -->
-<section class="mod" id="contacto">
-  <div class="contact-card">
-    <div class="cc-text">
-      <span class="sticker yellow" style="transform:rotate(-3deg)">¿Te gustó este curso?</span>
-      <h2>Creemos un recurso como este</h2>
-      <p>Diseño cursos y guías didácticas interactivas para emprendimientos, equipos y docentes: contenidos paso a paso, ejemplos resueltos, plantillas descargables y una identidad visual propia.</p>
-      <div class="cc-actions">
-        <a class="cc-btn primary" href="https://www.linkedin.com/in/natalia-lopez-carmona" target="_blank" rel="noopener">Contáctame por LinkedIn <span aria-hidden="true">→</span></a>
-        <a class="cc-btn" href="https://www.linkedin.com/in/natalia-lopez-carmona" target="_blank" rel="noopener">Ver mi perfil</a>
-      </div>
-      <p class="cc-url">linkedin.com/in/natalia-lopez-carmona</p>
-    </div>
-  </div>
 </section>
 
 <!-- ============ ANEXO A ============ -->
