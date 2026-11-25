@@ -366,6 +366,20 @@ footer{margin-top:50px;padding:20px;border:2px solid var(--ink);border-radius:18
 .b-type .tsample{font-size:1.6rem;line-height:1.15;overflow-wrap:anywhere}
 @media (max-width:760px){.board{grid-template-columns:minmax(0,1fr)}.board>div{grid-column:auto!important}}
 .board-tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:16px}
+/* contacto */
+.contact-card{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center;background:var(--blue);color:#fff;border:3px solid var(--ink);border-radius:28px;padding:34px 30px;box-shadow:8px 8px 0 var(--ink);position:relative;overflow:hidden}
+.contact-card::after{content:"";position:absolute;left:-40px;bottom:-50px;width:170px;height:170px;border-radius:50%;background:radial-gradient(#fff 1.8px,transparent 2px) 0 0/13px 13px;opacity:.3}
+.contact-card h2{margin:16px 0 10px;color:#fff}
+.contact-card p{max-width:56ch;position:relative;z-index:1}
+.contact-card .sticker{color:var(--ink)}
+.cc-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px;position:relative;z-index:1}
+.cc-btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:800;text-transform:uppercase;letter-spacing:.03em;font-size:.88rem;padding:12px 22px;border-radius:99px;border:2px solid var(--ink);background:var(--surface);color:var(--ink);box-shadow:4px 4px 0 var(--ink);transition:transform .15s}
+.cc-btn.primary{background:var(--yellow)}
+.cc-btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.cc-btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.cc-url{margin-top:12px;font-size:.84rem;opacity:.9}
+.cc-badge{width:150px;height:150px;border-radius:50%;background:var(--red);border:3px solid var(--ink);box-shadow:5px 5px 0 var(--ink);display:flex;align-items:center;justify-content:center;text-align:center;transform:rotate(10deg);font-weight:800;text-transform:uppercase;font-size:.85rem;line-height:1.15}
+@media (max-width:640px){.contact-card{grid-template-columns:minmax(0,1fr);padding:28px 20px}.cc-badge{display:none}}
 .dl-btn{display:none}
 body.dl-on .dl-btn{display:inline-block}
 .restore{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.86rem;border:2px dashed var(--ink);border-radius:99px;padding:8px 16px;background:var(--surface);cursor:pointer}
@@ -448,6 +462,7 @@ body.dl-on .dl-btn{display:inline-block}
     <li><a href="#m13"><span class="n">13</span><span>Etiquetado (Colombia)</span><span class="pr" data-pr="m13"></span></a></li>
     <li><a href="#m14"><span class="n">14</span><span>Presentación y evaluación</span><span class="pr" data-pr="m14"></span></a></li>
     <li><a href="#recurso"><span class="n">★</span><span><b>Tu tablero de marca</b></span><span></span></a></li>
+    <li><a href="#contacto"><span class="n">✦</span><span>Crea un recurso como este</span><span></span></a></li>
     <li class="group eyebrow">Anexos</li>
     <li><a href="#errores"><span class="n">A</span><span>Errores frecuentes</span><span></span></a></li>
     <li><a href="#herramientas"><span class="n">B</span><span>Herramientas digitales</span><span></span></a></li>
@@ -464,7 +479,7 @@ body.dl-on .dl-btn{display:inline-block}
 <div class="mobile-nav"><label class="eyebrow" for="jump">Ir a</label>
 <select id="jump">
   <option value="inicio">Cómo usar esta guía</option>
-  <option value="m1">01 · Fundamentos y mercado</option><option value="m2">02 · Investigación y competencia</option><option value="m3">03 · Público y buyer persona</option><option value="m4">04 · Posicionamiento y propuesta</option><option value="m5">05 · Nombre, eslogan y tono</option><option value="m6">06 · Logotipo</option><option value="m7">07 · Color</option><option value="m8">08 · Tipografía</option><option value="m9">09 · Fotografía y recursos</option><option value="m10">10 · Diseño de empaque</option><option value="m11">11 · Familia de productos</option><option value="m12">12 · Manual de marca</option><option value="m13">13 · Etiquetado (Colombia)</option><option value="m14">14 · Presentación y evaluación</option><option value="recurso">★ · Tu tablero de marca</option><option value="errores">A · Errores frecuentes</option><option value="herramientas">B · Herramientas</option><option value="plantillas">C · Plantillas</option><option value="fuentes">D · Fuentes</option>
+  <option value="m1">01 · Fundamentos y mercado</option><option value="m2">02 · Investigación y competencia</option><option value="m3">03 · Público y buyer persona</option><option value="m4">04 · Posicionamiento y propuesta</option><option value="m5">05 · Nombre, eslogan y tono</option><option value="m6">06 · Logotipo</option><option value="m7">07 · Color</option><option value="m8">08 · Tipografía</option><option value="m9">09 · Fotografía y recursos</option><option value="m10">10 · Diseño de empaque</option><option value="m11">11 · Familia de productos</option><option value="m12">12 · Manual de marca</option><option value="m13">13 · Etiquetado (Colombia)</option><option value="m14">14 · Presentación y evaluación</option><option value="recurso">★ · Tu tablero de marca</option><option value="contacto">✦ · Crea un recurso como este</option><option value="errores">A · Errores frecuentes</option><option value="herramientas">B · Herramientas</option><option value="plantillas">C · Plantillas</option><option value="fuentes">D · Fuentes</option>
 </select></div>
 <div class="wrap">
 
@@ -1820,6 +1835,23 @@ body.dl-on .dl-btn{display:inline-block}
   </div>
   <div class="board" id="board"></div>
   <p class="small muted" style="margin-top:14px">Las tipografías se muestran si escribiste el nombre exacto de una familia de Google Fonts (por ejemplo «Bricolage Grotesque»). Los empaques usan el nombre y el color HEX que escribiste en la plantilla de arquitectura de marca (Módulo 11). El tablero se descarga como archivo HTML: ábrelo en tu navegador y, si quieres un PDF, usa Imprimir → Guardar como PDF.</p>
+</section>
+
+<!-- ============ CONTACTO ============ -->
+<section class="mod" id="contacto">
+  <div class="contact-card">
+    <div class="cc-text">
+      <span class="sticker yellow" style="transform:rotate(-3deg)">¿Te gustó este curso?</span>
+      <h2>Creemos un recurso como este</h2>
+      <p>Diseño cursos y guías didácticas interactivas para emprendimientos, equipos y docentes: contenidos paso a paso, ejemplos resueltos, plantillas descargables y una identidad visual propia.</p>
+      <div class="cc-actions">
+        <a class="cc-btn primary" href="https://www.linkedin.com/in/natalia-lopez-carmona" target="_blank" rel="noopener">Contáctame por LinkedIn <span aria-hidden="true">→</span></a>
+        <a class="cc-btn" href="https://www.linkedin.com/in/natalia-lopez-carmona" target="_blank" rel="noopener">Ver mi perfil</a>
+      </div>
+      <p class="cc-url">linkedin.com/in/natalia-lopez-carmona</p>
+    </div>
+    <div class="cc-badge" aria-hidden="true"><span>Diseño<br>con<br>propósito</span></div>
+  </div>
 </section>
 
 <!-- ============ ANEXO A ============ -->
