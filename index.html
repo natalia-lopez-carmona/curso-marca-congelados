@@ -111,6 +111,8 @@ main{min-width:0;padding-left:max(16px,env(safe-area-inset-left,0px));padding-ri
 .route a:nth-child(3n+2) .num{background:var(--blue);color:#fff}
 .route a:nth-child(3n+3) .num{background:var(--red);color:#fff}
 .route b{font-weight:800;text-transform:uppercase;font-size:.84rem;line-height:1.25}
+.route span.todo{font-size:.86rem;line-height:1.35}
+.route span.d::before{content:"Entregable: ";font-weight:700}
 .route span.d{font-size:.8rem;color:var(--muted)}
 .route .arrow{justify-self:end;width:30px;height:30px;border:2px solid var(--ink);border-radius:50%;display:flex;align-items:center;justify-content:center}
 .route a.final{background:var(--blue);color:#fff}
@@ -143,6 +145,7 @@ section.mod:nth-of-type(3n+3) .modhead{background:var(--red-soft)}
 .block{margin:34px 0}
 .block > h3{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}
 .block > h3::before{content:"";width:14px;height:14px;border-radius:50%;background:var(--red);border:2px solid var(--ink);flex:none}
+.block > .hint{margin:-6px 0 16px;font-size:.9rem;color:var(--muted);max-width:70ch}
 .block > h3 .tag{font-family:var(--f-body);font-size:.68rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;background:var(--surface);border:2px solid var(--ink);border-radius:99px;padding:2px 10px}
 .stack{display:grid;gap:12px}
 
@@ -515,7 +518,7 @@ body.dl-on .dl-btn{display:inline-block}
 
   <div class="sec-title"><h2>Tu ruta</h2><span class="sticker yellow" style="transform:rotate(-3deg)">14 entregables + 1 recurso final</span></div>
   <nav class="route" aria-label="Módulos del curso">
-    <a href="#m1"><span class="num">01</span><b>Fundamentos y mercado</b><span class="d">Ficha inicial del proyecto</span><span class="arrow">→</span></a>
+    <a href="#m1"><span class="num">01</span><b>Fundamentos y mercado</b><span class="todo">Defines qué vendes, a quién y con qué recursos.</span><span class="todo">Visitas tiendas y comparas marcas competidoras.</span><span class="todo">Describes a tu cliente ideal con datos reales.</span><span class="todo">Decides en qué te diferencias y por qué te eligen.</span><span class="todo">Creas el nombre y la forma de hablar de tu marca.</span><span class="todo">Diseñas tu logotipo y sus versiones.</span><span class="todo">Eliges tus colores y compruebas que se lean bien.</span><span class="todo">Escoges las letras de tu marca y sus usos.</span><span class="todo">Defines cómo se verán tus fotos e ilustraciones.</span><span class="todo">Diseñas el frente y el reverso de tu empaque.</span><span class="todo">Organizas sabores, formatos y líneas de producto.</span><span class="todo">Reúnes todo en un manual de uso de la marca.</span><span class="todo">Revisas qué debe decir tu etiqueta por ley.</span><span class="todo">Presentas tu marca completa y la evalúas.</span><span class="todo">Ves tu marca resumida en una sola página.</span><span class="d">Ficha inicial del proyecto</span><span class="arrow">→</span></a>
     <a href="#m2"><span class="num">02</span><b>Investigación y competencia</b><span class="d">Matriz de competencia</span><span class="arrow">→</span></a>
     <a href="#m3"><span class="num">03</span><b>Público y buyer persona</b><span class="d">Perfil del cliente ideal</span><span class="arrow">→</span></a>
     <a href="#m4"><span class="num">04</span><b>Posicionamiento y propuesta</b><span class="d">Propuesta de valor</span><span class="arrow">→</span></a>
@@ -555,7 +558,7 @@ body.dl-on .dl-btn{display:inline-block}
     <div><b>Qué debo terminar</b>La ficha inicial del proyecto de marca.</div>
   </div>
 
-  <div class="block"><h3>Conceptos fundamentales <span class="tag">glosario</span></h3>
+  <div class="block"><h3>Conceptos fundamentales <span class="tag">glosario</span></h3><p class="hint">Lee las definiciones clave del módulo. Las vas a usar al completar la plantilla.</p>
     <dl class="terms">
       <div class="term"><dt>Producto</dt><dd>Lo que vendes físicamente.</dd><span class="ex">Una bolsa de 500 g de arveja con zanahoria congelada.</span></div>
       <div class="term"><dt>Empresa</dt><dd>La organización legal que produce y vende.</dd><span class="ex">«Alimentos Marcela S.A.S.», que aparece en la factura.</span></div>
@@ -569,7 +572,7 @@ body.dl-on .dl-btn{display:inline-block}
     </dl>
   </div>
 
-  <div class="block"><h3>Comparación visual: marca no es logotipo</h3>
+  <div class="block"><h3>Comparación visual: marca no es logotipo</h3><p class="hint">Compara las dos columnas para ver qué es marca y qué es solo diseño.</p>
     <div class="diagram"><svg viewBox="0 0 760 250" role="img" aria-label="Capas de la marca: el logotipo es la capa más pequeña dentro de identidad visual, identidad corporativa y marca">
       <ellipse cx="380" cy="125" rx="370" ry="118" class="d-acc"/>
       <ellipse cx="380" cy="140" rx="270" ry="92" class="d-fill"/>
@@ -583,7 +586,7 @@ body.dl-on .dl-btn{display:inline-block}
     <p class="cap">El logotipo es la pieza más visible, pero la más pequeña. Una marca con buen logotipo y mal producto sigue siendo una mala marca.</p>
   </div>
 
-  <div class="block"><h3>Particularidades de vender alimentos congelados</h3>
+  <div class="block"><h3>Particularidades de vender alimentos congelados</h3><p class="hint">Conoce lo que hace distinto vender congelados: frío, empaque y punto de venta.</p>
     <div class="grid2">
       <div class="card"><h4>El comprador no puede tocar ni oler</h4><p class="small">El producto está dentro de un congelador, muchas veces detrás de un vidrio empañado. El empaque hace todo el trabajo de mostrar qué hay dentro y transmitir calidad.</p></div>
       <div class="card"><h4>La decisión es rápida</h4><p class="small">Nadie deja la puerta del congelador abierta mucho tiempo. El frente del empaque debe comunicar qué es y por qué elegirlo en pocos segundos.</p></div>
@@ -592,7 +595,7 @@ body.dl-on .dl-btn{display:inline-block}
     </div>
   </div>
 
-  <div class="block"><h3>Cada categoría pide decisiones distintas <span class="tag">orientativo, no son reglas</span></h3>
+  <div class="block"><h3>Cada categoría pide decisiones distintas <span class="tag">orientativo, no son reglas</span></h3><p class="hint">Busca tu tipo de producto en la tabla y fíjate en qué decisiones te exige.</p>
     <div class="scroll ref"><table class="cat-table">
       <thead><tr><th>Categoría</th><th>Qué suele valorar el comprador</th><th>Qué conviene comunicar</th><th>Reto típico del empaque</th></tr></thead>
       <tbody>
@@ -612,7 +615,7 @@ body.dl-on .dl-btn{display:inline-block}
     </table></div>
   </div>
 
-  <div class="block"><h3>Qué influye en la decisión de compra</h3>
+  <div class="block"><h3>Qué influye en la decisión de compra</h3><p class="hint">Identifica qué mira tu cliente antes de elegir un congelado.</p>
     <div class="diagram"><svg viewBox="0 0 760 140" role="img" aria-label="Recorrido de decisión de compra en 5 momentos">
       <g>
         <rect x="10" y="30" width="132" height="70" rx="10" class="d-acc"/><text x="76" y="58" text-anchor="middle" class="d-txt">Lo ve</text><text x="76" y="78" text-anchor="middle" class="d-sm">color y forma destacan</text>
@@ -626,7 +629,7 @@ body.dl-on .dl-btn{display:inline-block}
     </svg></div>
   </div>
 
-  <div class="block"><h3>Paso a paso: define tu punto de partida</h3>
+  <div class="block"><h3>Paso a paso: define tu punto de partida</h3><p class="hint">Sigue los pasos para describir tu producto, tu cliente y tus límites.</p>
     <ol class="steps">
       <li><div><b>Escribe qué vendes en una frase concreta.</b><p class="how">Tipo de alimento + presentación + cantidad. Evita «alimentos saludables»; escribe «verduras picadas congeladas en bolsa de 500 g».</p></div></li>
       <li><div><b>Ubica tu categoría en la tabla anterior.</b><p class="how">Si tienes varias, elige la principal: es la que define tu primera estrategia.</p></div></li>
@@ -636,7 +639,7 @@ body.dl-on .dl-btn{display:inline-block}
     </ol>
   </div>
 
-  <div class="block"><h3>Ejemplo resuelto</h3>
+  <div class="block"><h3>Ejemplo resuelto</h3><p class="hint">Mira cómo Marcela resolvió este paso en Cosecha Lista. Después harás lo mismo con tu negocio.</p>
     <div class="solved"><span class="stamp">Ejemplo resuelto · ficticio</span>
       <h4>Ficha inicial de Marcela (Cosecha Lista)</h4>
       <dl class="kv">
@@ -651,7 +654,7 @@ body.dl-on .dl-btn{display:inline-block}
     </div>
   </div>
 
-  <div class="block"><h3>Errores comunes</h3>
+  <div class="block"><h3>Errores comunes</h3><p class="hint">Revisa lo que suele salir mal en esta etapa para no repetirlo.</p>
     <div class="errors">
       <div class="err"><div><small>Error</small><span class="e">Empezar por el logotipo</span></div><div><small>Por qué ocurre</small>El logotipo es lo más tangible y emocionante.</div><div><small>Cómo corregirlo</small>No abras Canva hasta terminar el Módulo 5.</div></div>
       <div class="err"><div><small>Error</small><span class="e">Definir el producto de forma vaga</span></div><div><small>Por qué ocurre</small>Se teme limitar el negocio.</div><div><small>Cómo corregirlo</small>Empieza específico; podrás ampliar después.</div></div>
@@ -659,7 +662,7 @@ body.dl-on .dl-btn{display:inline-block}
     </div>
   </div>
 
-  <div class="block"><h3>Recomendaciones prácticas</h3>
+  <div class="block"><h3>Recomendaciones prácticas</h3><p class="hint">Consejos cortos para tener a mano mientras trabajas.</p>
     <ul class="tips">
       <li><b>Abre una carpeta del proyecto</b> (en tu computador o en Google Drive) con una subcarpeta por módulo. Ahí guardarás fotos, capturas y entregables.</li>
       <li><b>Escribe como hablas.</b> Si no puedes explicárselo a tu vecino, aún no está claro.</li>
@@ -667,15 +670,15 @@ body.dl-on .dl-btn{display:inline-block}
     </ul>
   </div>
 
-  <div class="block"><h3>Actividad guiada</h3>
+  <div class="block"><h3>Actividad guiada</h3><p class="hint">Haz este ejercicio con tu propio negocio. Te deja listas las respuestas de la plantilla.</p>
     <div class="activity"><div class="meta"><span class="chip">45 a 60 minutos</span><span class="chip">Individual</span><span class="chip">Sin herramientas digitales</span></div>
       <p>Siguiendo los cinco pasos anteriores, describe el producto que deseas comercializar y explica qué problema o necesidad resuelve. Usa el ejemplo de Marcela como modelo de nivel de detalle, pero con tus propios datos.</p>
     </div>
   </div>
 
-  <div class="block"><h3>Plantilla para completar</h3><div class="tpl" data-tpl="t1"></div></div>
+  <div class="block"><h3>Plantilla para completar</h3><p class="hint">Escribe aquí tus respuestas. Se guardan en este navegador; al terminar, descarga la ficha y envíala.</p><div class="tpl" data-tpl="t1"></div></div>
   <div class="block"><div class="deliver"><svg aria-hidden="true"><use href="#i-box"/></svg><div><span class="eyebrow">Entregable del módulo</span><p>Ficha inicial del proyecto de marca</p></div></div></div>
-  <div class="block"><h3>Lista de verificación antes de continuar</h3>
+  <div class="block"><h3>Lista de verificación antes de continuar</h3><p class="hint">Marca cada punto que ya cumples. Si falta alguno, vuelve a ese paso antes de avanzar.</p>
     <ul class="check" data-check="m1">
       <li>Mi producto está descrito con tipo, presentación y cantidad.</li>
       <li>Identifiqué mi categoría principal de congelados.</li>
@@ -683,7 +686,7 @@ body.dl-on .dl-btn{display:inline-block}
       <li>Separé lo que sé de lo que supongo («por validar»).</li>
       <li>Puedo explicar la diferencia entre marca, logotipo e identidad visual.</li>
     </ul></div>
-  <div class="block"><h3>Criterios para evaluar el resultado</h3>
+  <div class="block"><h3>Criterios para evaluar el resultado</h3><p class="hint">Compara tu entregable con estos criterios para saber si quedó bien hecho.</p>
     <div class="criteria"><div><b>Claridad</b>Otra persona entiende qué vendes al leer la ficha una vez.</div><div><b>Foco en el cliente</b>El problema está formulado desde la vida del cliente.</div><div><b>Realismo</b>Las limitaciones son concretas y honestas.</div></div></div>
 </section>
 
@@ -699,7 +702,7 @@ body.dl-on .dl-btn{display:inline-block}
     <div><b>Qué debo terminar</b>Matriz de competencia con al menos 3 marcas y conclusiones.</div>
   </div>
 
-  <div class="block"><h3>Conceptos fundamentales</h3>
+  <div class="block"><h3>Conceptos fundamentales</h3><p class="hint">Lee las definiciones clave del módulo. Las vas a usar al completar la plantilla.</p>
     <dl class="terms">
       <div class="term"><dt>Competidor directo</dt><dd>Vende lo mismo que tú, al mismo tipo de cliente.</dd><span class="ex">Otra marca de arveja con zanahoria congelada.</span></div>
       <div class="term"><dt>Competidor indirecto</dt><dd>Resuelve la misma necesidad de otra forma.</dd><span class="ex">Verdura fresca ya picada en bandeja refrigerada, o la plaza de mercado.</span></div>
@@ -709,7 +712,7 @@ body.dl-on .dl-btn{display:inline-block}
     </dl>
   </div>
 
-  <div class="block"><h3>Paso a paso: cómo investigar</h3>
+  <div class="block"><h3>Paso a paso: cómo investigar</h3><p class="hint">Sigue estos pasos para visitar tiendas y registrar a tu competencia.</p>
     <ol class="steps">
       <li><div><b>Google.</b><p class="how">Busca «[tu producto] congelado» + tu ciudad. Ej.: «arveja congelada Bogotá». Revisa las primeras dos páginas, incluidas las pestañas Imágenes y Shopping. Anota marcas y tiendas.</p></div></li>
       <li><div><b>Google Maps.</b><p class="how">Busca «congelados», «distribuidora de congelados» y «supermercado» en tu zona. Mira fotos de clientes y reseñas: muestran congeladores reales y quejas frecuentes.</p></div></li>
@@ -722,14 +725,14 @@ body.dl-on .dl-btn{display:inline-block}
     </ol>
   </div>
 
-  <div class="block"><h3>Comparación: observar bien y observar mal</h3>
+  <div class="block"><h3>Comparación: observar bien y observar mal</h3><p class="hint">Aprende a anotar datos concretos en lugar de opiniones.</p>
     <div class="compare">
       <div class="no"><h4><svg width="18" height="18"><use href="#i-x"/></svg>Observación vaga</h4><q>La marca X tiene un empaque bonito y moderno.</q><p class="small">«Bonito» y «moderno» no te dicen qué hacer distinto.</p></div>
       <div class="yes"><h4><svg width="18" height="18"><use href="#i-check"/></svg>Observación útil</h4><q>La marca X usa fondo verde oscuro, foto cenital de las verduras y el peso en grande abajo a la derecha. No menciona tiempo de cocción en el frente.</q><p class="small">Describe hechos y deja ver una oportunidad.</p></div>
     </div>
   </div>
 
-  <div class="block"><h3>Ejemplo resuelto</h3>
+  <div class="block"><h3>Ejemplo resuelto</h3><p class="hint">Mira cómo Marcela resolvió este paso en Cosecha Lista. Después harás lo mismo con tu negocio.</p>
     <div class="solved"><span class="stamp">Ejemplo resuelto · ficticio</span>
       <h4>Matriz de competencia de Marcela</h4>
       <p class="small" style="margin-bottom:10px">Para no atribuir datos falsos a empresas reales, en este ejemplo las marcas competidoras también son <b>inventadas</b> (Marca A, B y C). En tu matriz usarás nombres reales y solo precios que hayas verificado, con fecha.</p>
@@ -753,32 +756,32 @@ body.dl-on .dl-btn{display:inline-block}
     </div>
   </div>
 
-  <div class="block"><h3>Errores comunes</h3>
+  <div class="block"><h3>Errores comunes</h3><p class="hint">Revisa lo que suele salir mal en esta etapa para no repetirlo.</p>
     <div class="errors">
       <div class="err"><div><small>Error</small><span class="e">Analizar solo marcas grandes</span></div><div><small>Por qué ocurre</small>Son las que más se ven.</div><div><small>Cómo corregirlo</small>Incluye al menos un emprendimiento y un competidor indirecto.</div></div>
       <div class="err"><div><small>Error</small><span class="e">Copiar lo que funciona en otros</span></div><div><small>Por qué ocurre</small>Parece seguro imitar al líder.</div><div><small>Cómo corregirlo</small>Usa la matriz para ver qué evitar repetir. Copiar puede además generar conflictos legales.</div></div>
       <div class="err"><div><small>Error</small><span class="e">Anotar precios sin fecha ni gramaje</span></div><div><small>Por qué ocurre</small>Parece un detalle.</div><div><small>Cómo corregirlo</small>Registra precio, peso, lugar y fecha; calcula precio por kilo.</div></div>
     </div>
   </div>
-  <div class="block"><h3>Recomendaciones prácticas</h3>
+  <div class="block"><h3>Recomendaciones prácticas</h3><p class="hint">Consejos cortos para tener a mano mientras trabajas.</p>
     <ul class="tips">
       <li><b>Toma la foto del estante completo.</b> Así verás qué color o forma sobresale y cuál se pierde.</li>
       <li><b>Usa Google Lens</b> sobre la foto de un empaque para encontrar la marca en línea y su tienda virtual.</li>
       <li><b>Lee las reseñas negativas.</b> Las quejas de los clientes de otros son tus oportunidades.</li>
     </ul></div>
-  <div class="block"><h3>Actividad guiada</h3>
+  <div class="block"><h3>Actividad guiada</h3><p class="hint">Haz este ejercicio con tu propio negocio. Te deja listas las respuestas de la plantilla.</p>
     <div class="activity"><div class="meta"><span class="chip">3 a 5 horas en total</span><span class="chip">Incluye una salida</span><span class="chip">Celular para fotos</span></div>
       <p>Analiza al menos tres marcas competidoras (idealmente dos directas y una indirecta) usando la ruta de 8 pasos. Completa la matriz y escribe tres o cuatro conclusiones como las de Marcela.</p></div></div>
-  <div class="block"><h3>Plantilla para completar</h3><div class="tpl" data-tpl="t2"></div></div>
+  <div class="block"><h3>Plantilla para completar</h3><p class="hint">Escribe aquí tus respuestas. Se guardan en este navegador; al terminar, descarga la ficha y envíala.</p><div class="tpl" data-tpl="t2"></div></div>
   <div class="block"><div class="deliver"><svg aria-hidden="true"><use href="#i-box"/></svg><div><span class="eyebrow">Entregable del módulo</span><p>Matriz de competencia y conclusiones</p></div></div></div>
-  <div class="block"><h3>Lista de verificación antes de continuar</h3>
+  <div class="block"><h3>Lista de verificación antes de continuar</h3><p class="hint">Marca cada punto que ya cumples. Si falta alguno, vuelve a ese paso antes de avanzar.</p>
     <ul class="check" data-check="m2">
       <li>Analicé al menos 3 marcas, incluida una indirecta.</li>
       <li>Tengo fotos del estante y de los empaques (frente y reverso).</li>
       <li>Los precios tienen gramaje, lugar y fecha.</li>
       <li>Escribí al menos 3 conclusiones con oportunidades concretas.</li>
     </ul></div>
-  <div class="block"><h3>Criterios para evaluar el resultado</h3>
+  <div class="block"><h3>Criterios para evaluar el resultado</h3><p class="hint">Compara tu entregable con estos criterios para saber si quedó bien hecho.</p>
     <div class="criteria"><div><b>Evidencia</b>Cada observación se puede comprobar con una foto o un enlace.</div><div><b>Variedad</b>Incluye marcas grandes, pequeñas e indirectas.</div><div><b>Utilidad</b>Las conclusiones orientan decisiones de los módulos siguientes.</div></div></div>
 </section>
 
@@ -793,7 +796,7 @@ body.dl-on .dl-btn{display:inline-block}
     <div><b>Cómo sé si va bien</b>Tu persona tiene una frustración y una motivación concretas.</div>
     <div><b>Qué debo terminar</b>Perfil del cliente ideal.</div>
   </div>
-  <div class="block"><h3>Conceptos fundamentales</h3>
+  <div class="block"><h3>Conceptos fundamentales</h3><p class="hint">Lee las definiciones clave del módulo. Las vas a usar al completar la plantilla.</p>
     <dl class="terms">
       <div class="term"><dt>Público objetivo</dt><dd>El grupo de personas al que decides dirigirte primero.</dd><span class="ex">Hogares con hijos en Bogotá donde los adultos trabajan fuera de casa.</span></div>
       <div class="term"><dt>Segmento de mercado</dt><dd>Una parte del mercado con características y necesidades parecidas.</dd><span class="ex">Restaurantes pequeños que compran verdura picada al por mayor.</span></div>
@@ -805,14 +808,14 @@ body.dl-on .dl-btn{display:inline-block}
       <div class="term"><dt>Variables psicográficas</dt><dd>Qué piensa y valora: estilo de vida, creencias.</dd><span class="ex">Le importa comer casero y le da culpa pedir domicilios.</span></div>
     </dl></div>
 
-  <div class="block"><h3>Comparación: no todos compran congelados por lo mismo <span class="tag">perfiles ilustrativos</span></h3>
+  <div class="block"><h3>Comparación: no todos compran congelados por lo mismo <span class="tag">perfiles ilustrativos</span></h3><p class="hint">Compara tres perfiles para ver cómo cambian los motivos de compra.</p>
     <div class="grid3">
       <div class="card"><h4>La persona sin tiempo</h4><p class="small">Busca ahorrar tiempo de preparación. Valora instrucciones claras y porciones. Le preocupa que «sepa a congelado».</p></div>
       <div class="card"><h4>El negocio de comidas</h4><p class="small">Busca costo estable y rendimiento. Valora el formato grande y la regularidad del corte. Le preocupa el desabastecimiento.</p></div>
       <div class="card"><h4>La persona que cuida su alimentación</h4><p class="small">Busca composición sencilla. Valora leer ingredientes. Desconfía de las promesas exageradas.</p></div>
     </div></div>
 
-  <div class="block"><h3>Paso a paso: construir tu buyer persona</h3>
+  <div class="block"><h3>Paso a paso: construir tu buyer persona</h3><p class="hint">Sigue los pasos para describir a tu cliente ideal con datos reales.</p>
     <ol class="steps">
       <li><div><b>Elige un solo segmento para empezar.</b><p class="how">Usa tus conclusiones del Módulo 2: ¿qué cliente está desatendido?</p></div></li>
       <li><div><b>Responde las 10 preguntas guía.</b><p class="how">¿Quién compra? ¿Quién consume? ¿Qué edad tiene? ¿Dónde vive? ¿Qué necesidades tiene? ¿Qué valora al comprar? ¿Qué le preocupa? ¿Cuánto está dispuesto a pagar? ¿Dónde suele comprar? ¿Qué marcas conoce?</p></div></li>
@@ -821,7 +824,7 @@ body.dl-on .dl-btn{display:inline-block}
       <li><div><b>Escribe la ficha y dale un nombre.</b><p class="how">Un nombre y una frase que la persona diría ayudan a recordar que diseñas para alguien real.</p></div></li>
     </ol></div>
 
-  <div class="block"><h3>Ejemplo resuelto</h3>
+  <div class="block"><h3>Ejemplo resuelto</h3><p class="hint">Mira cómo Marcela resolvió este paso en Cosecha Lista. Después harás lo mismo con tu negocio.</p>
     <div class="solved"><span class="stamp">Ejemplo resuelto · ficticio</span>
       <h4>Buyer persona principal de Cosecha Lista: «Diana»</h4>
       <dl class="kv">
@@ -838,21 +841,21 @@ body.dl-on .dl-btn{display:inline-block}
       <p class="why"><b>Por qué funciona:</b> incluye comprador y consumidores, una preocupación concreta («queda aguada») que el empaque puede responder con instrucciones, y marca como suposición lo que aún no está comprobado.</p>
     </div></div>
 
-  <div class="block"><h3>Errores comunes</h3>
+  <div class="block"><h3>Errores comunes</h3><p class="hint">Revisa lo que suele salir mal en esta etapa para no repetirlo.</p>
     <div class="errors">
       <div class="err"><div><small>Error</small><span class="e">Inventar sin hablar con nadie</span></div><div><small>Por qué ocurre</small>Da pena o parece innecesario.</div><div><small>Cómo corregirlo</small>Cinco conversaciones de 10 minutos cambian mucho el resultado.</div></div>
       <div class="err"><div><small>Error</small><span class="e">Mezclar varios clientes en uno</span></div><div><small>Por qué ocurre</small>Miedo a dejar clientes por fuera.</div><div><small>Cómo corregirlo</small>Haz una persona principal; si hace falta, una secundaria aparte.</div></div>
       <div class="err"><div><small>Error</small><span class="e">Usar estereotipos</span></div><div><small>Por qué ocurre</small>Es más rápido.</div><div><small>Cómo corregirlo</small>Básate en lo que escuchaste, no en clichés de género o edad.</div></div>
     </div></div>
-  <div class="block"><h3>Recomendaciones prácticas</h3>
+  <div class="block"><h3>Recomendaciones prácticas</h3><p class="hint">Consejos cortos para tener a mano mientras trabajas.</p>
     <ul class="tips"><li><b>Graba (con permiso) o anota textual.</b> Las palabras del cliente valen más que tu resumen.</li><li><b>Google Trends</b> te muestra si en tu región crece el interés por búsquedas como «verduras congeladas» o «freidora de aire».</li></ul></div>
-  <div class="block"><h3>Actividad guiada</h3>
+  <div class="block"><h3>Actividad guiada</h3><p class="hint">Haz este ejercicio con tu propio negocio. Te deja listas las respuestas de la plantilla.</p>
     <div class="activity"><div class="meta"><span class="chip">2 a 3 horas</span><span class="chip">5 conversaciones</span></div><p>Construye la ficha de buyer persona de tu cliente principal respondiendo las 10 preguntas y apoyándote en tus conversaciones. Escribe al final tres frases textuales que escuchaste.</p></div></div>
-  <div class="block"><h3>Plantilla para completar</h3><div class="tpl" data-tpl="t3"></div></div>
+  <div class="block"><h3>Plantilla para completar</h3><p class="hint">Escribe aquí tus respuestas. Se guardan en este navegador; al terminar, descarga la ficha y envíala.</p><div class="tpl" data-tpl="t3"></div></div>
   <div class="block"><div class="deliver"><svg aria-hidden="true"><use href="#i-box"/></svg><div><span class="eyebrow">Entregable del módulo</span><p>Perfil del cliente ideal</p></div></div></div>
-  <div class="block"><h3>Lista de verificación antes de continuar</h3>
+  <div class="block"><h3>Lista de verificación antes de continuar</h3><p class="hint">Marca cada punto que ya cumples. Si falta alguno, vuelve a ese paso antes de avanzar.</p>
     <ul class="check" data-check="m3"><li>Elegí un segmento principal.</li><li>Distinguí quién compra y quién consume.</li><li>Hablé con al menos 5 personas reales (o anoté que es una suposición).</li><li>Mi persona tiene una preocupación concreta que el empaque puede responder.</li></ul></div>
-  <div class="block"><h3>Criterios para evaluar el resultado</h3>
+  <div class="block"><h3>Criterios para evaluar el resultado</h3><p class="hint">Compara tu entregable con estos criterios para saber si quedó bien hecho.</p>
     <div class="criteria"><div><b>Especificidad</b>Se puede imaginar a la persona en el supermercado.</div><div><b>Evidencia</b>Incluye frases o datos reales.</div><div><b>Relevancia</b>Las preocupaciones se relacionan con congelados.</div></div></div>
 </section>
 
@@ -867,7 +870,7 @@ body.dl-on .dl-btn{display:inline-block}
     <div><b>Cómo sé si va bien</b>Tu propuesta no podría firmarla cualquier competidor.</div>
     <div><b>Qué debo terminar</b>Documento de posicionamiento y propuesta de valor.</div>
   </div>
-  <div class="block"><h3>Conceptos fundamentales</h3>
+  <div class="block"><h3>Conceptos fundamentales</h3><p class="hint">Lee las definiciones clave del módulo. Las vas a usar al completar la plantilla.</p>
     <dl class="terms">
       <div class="term"><dt>Posicionamiento</dt><dd>El lugar que quieres ocupar en la mente del cliente frente a las alternativas.</dd><span class="ex">«La verdura congelada para cocinar platos colombianos rápido».</span></div>
       <div class="term"><dt>Propuesta de valor</dt><dd>La promesa concreta de lo que el cliente gana al elegirte.</dd><span class="ex">«Sudado casero en 20 minutos sin pelar ni picar».</span></div>
@@ -876,7 +879,7 @@ body.dl-on .dl-btn{display:inline-block}
       <div class="term"><dt>Beneficio</dt><dd>Lo que la característica le da a la persona.</dd><span class="ex">Se cocina parejo en 10 minutos.</span></div>
     </dl></div>
 
-  <div class="block"><h3>Formas de competir <span class="tag">elige una principal</span></h3>
+  <div class="block"><h3>Formas de competir <span class="tag">elige una principal</span></h3><p class="hint">Elige la forma principal en que tu marca va a competir.</p>
     <div class="scroll ref"><table>
       <thead><tr><th>Estrategia</th><th>Qué significa</th><th>Ejemplo en congelados</th><th>Requisito para sostenerla</th></tr></thead>
       <tbody>
@@ -887,7 +890,7 @@ body.dl-on .dl-btn{display:inline-block}
         <tr><td><b>Experiencia</b></td><td>Generar una vivencia o emoción</td><td>Helados artesanales para celebraciones</td><td>Coherencia en todos los puntos de contacto</td></tr>
       </tbody></table></div></div>
 
-  <div class="block"><h3>Paso a paso: de característica a propuesta</h3>
+  <div class="block"><h3>Paso a paso: de característica a propuesta</h3><p class="hint">Convierte lo que tiene tu producto en un beneficio claro para el cliente.</p>
     <ol class="steps">
       <li><div><b>Lista 5 características reales de tu producto.</b><p class="how">Solo las que puedas comprobar: corte, origen, proceso, ingredientes, formato.</p></div></li>
       <li><div><b>Convierte cada una en beneficio con la pregunta «¿y eso qué?».</b><p class="how">«Escaldado» → ¿y eso qué? → «conserva color y textura» → ¿y eso qué? → «el plato se ve casero».</p></div></li>
@@ -896,13 +899,13 @@ body.dl-on .dl-btn{display:inline-block}
       <li><div><b>Escribe tres versiones y compáralas.</b><p class="how">Usa la prueba de las 3 preguntas: ¿es concreta? ¿es creíble y demostrable? ¿un competidor podría decir exactamente lo mismo?</p></div></li>
     </ol></div>
 
-  <div class="block"><h3>Ejercicio de comparación: genérica o concreta</h3>
+  <div class="block"><h3>Ejercicio de comparación: genérica o concreta</h3><p class="hint">Compara frases vagas con frases concretas y aprende a escribir las segundas.</p>
     <div class="compare">
       <div class="no"><h4><svg width="18" height="18"><use href="#i-x"/></svg>Genérica</h4><q>Ofrecemos productos de calidad para toda la familia, frescos y deliciosos.</q><p class="small">Cualquier marca podría firmarla. No dice qué producto, para quién, ni qué gana el cliente.</p></div>
       <div class="yes"><h4><svg width="18" height="18"><use href="#i-check"/></svg>Concreta</h4><q>Ofrecemos mezclas de verduras congeladas para familias que trabajan y necesitan cocinar platos colombianos entre semana, mediante verduras de la región ya peladas, cortadas y escaldadas, para servir un sudado casero en unos 20 minutos.</q><p class="small">Producto, público, necesidad, diferencia y beneficio están claros. El tiempo debe estar respaldado por pruebas de cocción.</p></div>
     </div></div>
 
-  <div class="block"><h3>Ejemplo resuelto</h3>
+  <div class="block"><h3>Ejemplo resuelto</h3><p class="hint">Mira cómo Marcela resolvió este paso en Cosecha Lista. Después harás lo mismo con tu negocio.</p>
     <div class="solved"><span class="stamp">Ejemplo resuelto · ficticio</span>
       <h4>Las tres propuestas de Marcela y la elegida</h4>
       <div class="scroll ref"><table>
@@ -915,20 +918,20 @@ body.dl-on .dl-btn{display:inline-block}
       <p class="why"><b>Posicionamiento elegido:</b> conveniencia + especialización en cocina colombiana. <b>Ventaja competitiva:</b> relación directa con productores de la sabana y recetas pensadas para platos tradicionales. Esta decisión explicará después por qué el empaque muestra el plato terminado y el tiempo de preparación.</p>
     </div></div>
 
-  <div class="block"><h3>Errores comunes</h3>
+  <div class="block"><h3>Errores comunes</h3><p class="hint">Revisa lo que suele salir mal en esta etapa para no repetirlo.</p>
     <div class="errors">
       <div class="err"><div><small>Error</small><span class="e">Querer competir en todo</span></div><div><small>Por qué ocurre</small>Parece que más atributos es mejor.</div><div><small>Cómo corregirlo</small>Elige una estrategia principal y como máximo una de apoyo.</div></div>
       <div class="err"><div><small>Error</small><span class="e">Prometer lo que no puedes demostrar</span></div><div><small>Por qué ocurre</small>Las promesas fuertes suenan atractivas.</div><div><small>Cómo corregirlo</small>Si dices «20 minutos», cocina y cronometra varias veces.</div></div>
     </div></div>
-  <div class="block"><h3>Recomendaciones prácticas</h3>
+  <div class="block"><h3>Recomendaciones prácticas</h3><p class="hint">Consejos cortos para tener a mano mientras trabajas.</p>
     <ul class="tips"><li><b>Lee tu propuesta en voz alta a alguien de tu segmento.</b> Si pregunta «¿y qué tiene de especial?», aún es genérica.</li><li><b>Evita las palabras vacías:</b> calidad, delicioso, el mejor, innovador. Reemplázalas por un hecho.</li></ul></div>
-  <div class="block"><h3>Actividad guiada</h3>
+  <div class="block"><h3>Actividad guiada</h3><p class="hint">Haz este ejercicio con tu propio negocio. Te deja listas las respuestas de la plantilla.</p>
     <div class="activity"><div class="meta"><span class="chip">60 a 90 minutos</span></div><p>Redacta tres propuestas de valor con la fórmula, evalúalas con las tres preguntas y selecciona la más sólida. Justifica tu elección.</p></div></div>
-  <div class="block"><h3>Plantilla para completar</h3><div class="tpl" data-tpl="t4"></div></div>
+  <div class="block"><h3>Plantilla para completar</h3><p class="hint">Escribe aquí tus respuestas. Se guardan en este navegador; al terminar, descarga la ficha y envíala.</p><div class="tpl" data-tpl="t4"></div></div>
   <div class="block"><div class="deliver"><svg aria-hidden="true"><use href="#i-box"/></svg><div><span class="eyebrow">Entregable del módulo</span><p>Documento de posicionamiento y propuesta de valor</p></div></div></div>
-  <div class="block"><h3>Lista de verificación antes de continuar</h3>
+  <div class="block"><h3>Lista de verificación antes de continuar</h3><p class="hint">Marca cada punto que ya cumples. Si falta alguno, vuelve a ese paso antes de avanzar.</p>
     <ul class="check" data-check="m4"><li>Elegí una forma principal de competir.</li><li>Convertí al menos 5 características en beneficios.</li><li>Escribí y comparé 3 propuestas.</li><li>La propuesta elegida es concreta, creíble y única.</li></ul></div>
-  <div class="block"><h3>Criterios para evaluar el resultado</h3>
+  <div class="block"><h3>Criterios para evaluar el resultado</h3><p class="hint">Compara tu entregable con estos criterios para saber si quedó bien hecho.</p>
     <div class="criteria"><div><b>Concreción</b>Nombra producto, público y beneficio.</div><div><b>Respaldo</b>Cada promesa tiene evidencia.</div><div><b>Diferencia</b>Responde a la oportunidad hallada en el Módulo 2.</div></div></div>
 </section>
 
@@ -943,7 +946,7 @@ body.dl-on .dl-btn{display:inline-block}
     <div><b>Cómo sé si va bien</b>El nombre pasa la evaluación y no aparece registrado por otro en tu categoría.</div>
     <div><b>Qué debo terminar</b>Nombre, eslogan y personalidad verbal.</div>
   </div>
-  <div class="block"><h3>Conceptos fundamentales</h3>
+  <div class="block"><h3>Conceptos fundamentales</h3><p class="hint">Lee las definiciones clave del módulo. Las vas a usar al completar la plantilla.</p>
     <dl class="terms">
       <div class="term"><dt>Naming</dt><dd>El proceso de crear el nombre de una marca.</dd><span class="ex">Pasar de 60 palabras a 1 nombre elegido con criterios.</span></div>
       <div class="term"><dt>Nombre descriptivo</dt><dd>Dice lo que es el producto.</dd><span class="ex">«Verduras Congeladas Sabana». Fácil de entender, difícil de proteger y de diferenciar.</span></div>
@@ -955,7 +958,7 @@ body.dl-on .dl-btn{display:inline-block}
       <div class="term"><dt>Mensajes clave</dt><dd>3 o 4 ideas que la marca repite en todos los medios.</dd><span class="ex">Tiempo recuperado, verdura de la región, cocina colombiana.</span></div>
     </dl></div>
 
-  <div class="block"><h3>Paso a paso: crear el nombre</h3>
+  <div class="block"><h3>Paso a paso: crear el nombre</h3><p class="hint">Genera opciones de nombre, fíltralas y verifica que estén disponibles.</p>
     <ol class="steps">
       <li><div><b>Identifica conceptos asociados.</b><p class="how">Desde tu propuesta de valor: origen, beneficio, emoción, proceso, cultura.</p></div></li>
       <li><div><b>Crea un banco de 40 a 60 palabras.</b><p class="how">Sin juzgar. Incluye sinónimos, palabras regionales y palabras en otros idiomas solo si tu público las entiende.</p></div></li>
@@ -967,7 +970,7 @@ body.dl-on .dl-btn{display:inline-block}
       <li><div><b>Selecciona 2 o 3 candidatos y pásalos por la matriz.</b><p class="how">Elige el de mayor puntaje que además puedas proteger.</p></div></li>
     </ol></div>
 
-  <div class="block"><h3>Ejemplo resuelto</h3>
+  <div class="block"><h3>Ejemplo resuelto</h3><p class="hint">Mira cómo Marcela resolvió este paso en Cosecha Lista. Después harás lo mismo con tu negocio.</p>
     <div class="solved"><span class="stamp">Ejemplo resuelto · ficticio</span>
       <h4>Cómo Marcela llegó a «Cosecha Lista»</h4>
       <p class="small"><b>Banco de palabras (extracto):</b> huerta, cosecha, sabana, lista, ya, fogón, olla, criolla, mazorca, frío, escarcha, mano, tierra, vereda, pronto, tiempo, mesa, casa.</p>
@@ -991,27 +994,27 @@ body.dl-on .dl-btn{display:inline-block}
       <p class="why"><b>Nota sobre la disponibilidad:</b> los puntajes de disponibilidad son parte del ejercicio ficticio. «Cosecha Lista» no fue consultado como marca registrada; si quieres usar un nombre real, haz tu propia consulta ante la SIC.</p>
     </div></div>
 
-  <div class="block"><h3>Comparación: tono de voz en un mismo mensaje</h3>
+  <div class="block"><h3>Comparación: tono de voz en un mismo mensaje</h3><p class="hint">Lee el mismo mensaje en varios tonos y elige el que va con tu marca.</p>
     <div class="compare">
       <div class="no"><h4><svg width="18" height="18"><use href="#i-x"/></svg>Fuera de personalidad</h4><q>Producto vegetal congelado IQF de alta calidad. Preparación: sumergir en agua en ebullición.</q><p class="small">Técnico y frío. Sirve para una ficha técnica, no para Diana.</p></div>
       <div class="yes"><h4><svg width="18" height="18"><use href="#i-check"/></svg>Con la voz de la marca</h4><q>Sácala del congelador y échala directo a la olla. En unos 10 minutos está lista.</q><p class="small">Cercano, práctico y con verbos de acción. (El tiempo debe corresponder a tus pruebas.)</p></div>
     </div></div>
 
-  <div class="block"><h3>Errores comunes</h3>
+  <div class="block"><h3>Errores comunes</h3><p class="hint">Revisa lo que suele salir mal en esta etapa para no repetirlo.</p>
     <div class="errors">
       <div class="err"><div><small>Error</small><span class="e">Elegir un nombre solo porque suena bonito</span></div><div><small>Por qué ocurre</small>La emoción decide antes que los criterios.</div><div><small>Cómo corregirlo</small>Pásalo por la matriz; si no se relaciona con tu propuesta, descártalo.</div></div>
       <div class="err"><div><small>Error</small><span class="e">No revisar disponibilidad</span></div><div><small>Por qué ocurre</small>Se asume que si no se ve en el supermercado, está libre.</div><div><small>Cómo corregirlo</small>Consulta antecedentes ante la SIC y asesórate antes de imprimir.</div></div>
       <div class="err"><div><small>Error</small><span class="e">Nombres difíciles de escribir</span></div><div><small>Por qué ocurre</small>Se busca originalidad con letras raras (K, Z, W).</div><div><small>Cómo corregirlo</small>Haz la prueba del teléfono.</div></div>
     </div></div>
-  <div class="block"><h3>Recomendaciones prácticas</h3>
+  <div class="block"><h3>Recomendaciones prácticas</h3><p class="hint">Consejos cortos para tener a mano mientras trabajas.</p>
     <ul class="tips"><li><b>Piensa en el crecimiento.</b> «Arvejas Marcela» limita si mañana vendes empanadas.</li><li><b>Revisa usuario en redes y dominio</b> el mismo día que eliges; pueden ocuparse rápido.</li><li><b>Desconfía de los generadores de nombres con IA</b> como fuente final: sirven para ampliar el banco de palabras, no revisan disponibilidad.</li></ul></div>
-  <div class="block"><h3>Actividad guiada</h3>
+  <div class="block"><h3>Actividad guiada</h3><p class="hint">Haz este ejercicio con tu propio negocio. Te deja listas las respuestas de la plantilla.</p>
     <div class="activity"><div class="meta"><span class="chip">2 a 4 horas</span><span class="chip">Incluye consultas</span></div><p>Crea cinco nombres siguiendo los 8 pasos, evalúalos en la matriz (el total se calcula solo) y selecciona uno. Luego define eslogan, personalidad y mensajes clave en la ficha de personalidad.</p></div></div>
-  <div class="block"><h3>Plantillas para completar</h3><div class="stack" style="gap:26px"><div class="tpl" data-tpl="t5"></div><div class="tpl" data-tpl="t6"></div></div></div>
+  <div class="block"><h3>Plantillas para completar</h3><p class="hint">Escribe aquí tus respuestas. Se guardan en este navegador; al terminar, descarga las fichas y envíalas.</p><div class="stack" style="gap:26px"><div class="tpl" data-tpl="t5"></div><div class="tpl" data-tpl="t6"></div></div></div>
   <div class="block"><div class="deliver"><svg aria-hidden="true"><use href="#i-box"/></svg><div><span class="eyebrow">Entregable del módulo</span><p>Nombre, eslogan y personalidad verbal de la marca</p></div></div></div>
-  <div class="block"><h3>Lista de verificación antes de continuar</h3>
+  <div class="block"><h3>Lista de verificación antes de continuar</h3><p class="hint">Marca cada punto que ya cumples. Si falta alguno, vuelve a ese paso antes de avanzar.</p>
     <ul class="check" data-check="m5"><li>Tengo un banco de al menos 40 palabras.</li><li>Evalué 5 nombres en la matriz.</li><li>Hice la prueba del teléfono y de recordación.</li><li>Consulté disponibilidad preliminar (Google, redes, dominio, SIC).</li><li>Definí eslogan, 3 rasgos de personalidad y mensajes clave.</li></ul></div>
-  <div class="block"><h3>Criterios para evaluar el resultado</h3>
+  <div class="block"><h3>Criterios para evaluar el resultado</h3><p class="hint">Compara tu entregable con estos criterios para saber si quedó bien hecho.</p>
     <div class="criteria"><div><b>Pertinencia</b>El nombre se conecta con la propuesta de valor.</div><div><b>Usabilidad</b>Se pronuncia, escribe y recuerda con facilidad.</div><div><b>Coherencia verbal</b>Eslogan y mensajes suenan a la misma marca.</div></div></div>
 </section>
 
@@ -1026,7 +1029,7 @@ body.dl-on .dl-btn{display:inline-block}
     <div><b>Cómo sé si va bien</b>Se reconoce a 1 cm, en blanco y negro y sobre fondo oscuro.</div>
     <div><b>Qué debo terminar</b>Logotipo principal, versiones y justificación.</div>
   </div>
-  <div class="block"><h3>Conceptos fundamentales</h3>
+  <div class="block"><h3>Conceptos fundamentales</h3><p class="hint">Lee las definiciones clave del módulo. Las vas a usar al completar la plantilla.</p>
     <dl class="terms">
       <div class="term"><dt>Logotipo</dt><dd>Solo texto diseñado.</dd><span class="ex">Las palabras «Cosecha Lista» con su tipografía.</span></div>
       <div class="term"><dt>Isotipo</dt><dd>Solo símbolo, sin texto.</dd><span class="ex">La hoja con el copo.</span></div>
@@ -1036,7 +1039,7 @@ body.dl-on .dl-btn{display:inline-block}
       <div class="term"><dt>Área de protección</dt><dd>Espacio vacío alrededor del logotipo que ningún elemento debe invadir.</dd><span class="ex">Un margen igual a la altura de la letra «C».</span></div>
     </dl></div>
 
-  <div class="block"><h3>Comparación visual: tipos de marca gráfica <span class="tag">ejemplo ficticio</span></h3>
+  <div class="block"><h3>Comparación visual: tipos de marca gráfica <span class="tag">ejemplo ficticio</span></h3><p class="hint">Conoce los tipos de logotipo y piensa cuál le sirve a tu marca.</p>
     <div class="logo-lab">
       <div style="background:#fff;color:#1F2A24"><div class="wm" style="font-size:1.4rem">Cosecha Lista</div><span class="lbl">Logotipo</span></div>
       <div style="background:#fff;color:#1F2A24"><svg width="56" height="56" aria-hidden="true"><use href="#iso"/></svg><span class="lbl">Isotipo</span></div>
@@ -1044,7 +1047,7 @@ body.dl-on .dl-btn{display:inline-block}
       <div style="background:#fff;color:#1F2A24"><svg width="86" height="86" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="47" fill="#2E6B3F"/><circle cx="50" cy="50" r="39" fill="none" stroke="#F2B632" stroke-width="2"/><text x="50" y="47" text-anchor="middle" font-family="Bricolage Grotesque" font-weight="800" font-size="15" fill="#fff">COSECHA</text><text x="50" y="64" text-anchor="middle" font-family="Bricolage Grotesque" font-weight="800" font-size="15" fill="#F2B632">LISTA</text></svg><span class="lbl">Isologo</span></div>
     </div></div>
 
-  <div class="block"><h3>Paso a paso: diseñar el logotipo</h3>
+  <div class="block"><h3>Paso a paso: diseñar el logotipo</h3><p class="hint">Sigue los pasos para bocetar, digitalizar y probar tu logotipo.</p>
     <ol class="steps">
       <li><div><b>Revisa la estrategia.</b><p class="how">Relee propuesta de valor, personalidad y buyer persona. Escribe arriba de tu hoja: «el logo debe transmitir…».</p></div></li>
       <li><div><b>Define 3 conceptos visuales.</b><p class="how">Traduce rasgos en ideas dibujables. Cercana → formas redondeadas. Local → hoja, sabana, montaña. Práctica → formas simples.</p></div></li>
@@ -1058,7 +1061,7 @@ body.dl-on .dl-btn{display:inline-block}
       <li><div><b>Prepara versiones finales.</b><p class="how">Exporta PNG con fondo transparente, PDF y SVG si tu herramienta lo permite. Guarda los archivos editables originales.</p></div></li>
     </ol></div>
 
-  <div class="block"><h3>Antes y después</h3>
+  <div class="block"><h3>Antes y después</h3><p class="hint">Mira cómo mejora un logotipo cuando se corrigen sus problemas.</p>
     <div class="compare">
       <div class="no"><h4><svg width="18" height="18"><use href="#i-x"/></svg>Antes: primer intento</h4>
         <div style="background:#fff;border-radius:8px;padding:14px;text-align:center;color:#1F2A24">
@@ -1071,7 +1074,7 @@ body.dl-on .dl-btn{display:inline-block}
         <p class="small" style="margin-top:8px">Un símbolo simple, una sola familia tipográfica, colores planos. Funciona en una tinta y a tamaño pequeño.</p></div>
     </div></div>
 
-  <div class="block"><h3>Ejemplo resuelto</h3>
+  <div class="block"><h3>Ejemplo resuelto</h3><p class="hint">Mira cómo Marcela resolvió este paso en Cosecha Lista. Después harás lo mismo con tu negocio.</p>
     <div class="solved"><span class="stamp">Ejemplo resuelto · ficticio</span>
       <h4>Sistema de logotipo de Cosecha Lista</h4>
       <div class="logo-lab" style="margin-bottom:12px">
@@ -1085,7 +1088,7 @@ body.dl-on .dl-btn{display:inline-block}
       <p class="why"><b>Conexión con la estrategia:</b> «cercana» → formas redondeadas; «práctica» → pocos elementos; «local» → hoja y referencia a la sabana en el descriptor.</p>
     </div></div>
 
-  <div class="block"><h3>Usos incorrectos</h3>
+  <div class="block"><h3>Usos incorrectos</h3><p class="hint">Aprende qué no hacer con tu logotipo: deformarlo, cambiarle el color o saturarlo.</p>
     <div class="logo-lab">
       <div style="background:#fff;color:#1F2A24"><div class="wm" style="transform:scaleX(1.5)"><svg aria-hidden="true"><use href="#iso"/></svg>Cosecha</div><span class="lbl" style="color:#B3261E">No deformar</span></div>
       <div style="background:#7DB246;color:#F2B632"><div class="wm"><svg aria-hidden="true"><use href="#iso"/></svg>Cosecha Lista</div><span class="lbl" style="color:#1F2A24">No usar sin contraste</span></div>
@@ -1093,24 +1096,24 @@ body.dl-on .dl-btn{display:inline-block}
       <div style="background:#fff;color:#1F2A24"><div class="wm" style="filter:drop-shadow(3px 3px 2px #000)"><svg aria-hidden="true"><use href="#iso"/></svg>Cosecha Lista</div><span class="lbl" style="color:#B3261E">No añadir sombras ni efectos</span></div>
     </div></div>
 
-  <div class="block"><h3>Sobre los logotipos generados con IA</h3>
+  <div class="block"><h3>Sobre los logotipos generados con IA</h3><p class="hint">Ten en cuenta estos riesgos si usas inteligencia artificial para tu logotipo.</p>
     <div class="note warn"><p><b>Úsalos solo como inspiración, nunca sin revisión.</b> Los generadores automáticos suelen producir imágenes con detalles que no se pueden reproducir a tamaño pequeño, letras deformadas, formas parecidas a marcas existentes y archivos que no son vectoriales (se pixelan al ampliarse). Además, las condiciones de propiedad y registro de esas imágenes varían según la herramienta. Si usas IA, redibuja el resultado con formas simples, revisa que no se parezca a otra marca y confirma los términos de uso comercial de la herramienta.</p></div></div>
 
-  <div class="block"><h3>Errores comunes</h3>
+  <div class="block"><h3>Errores comunes</h3><p class="hint">Revisa lo que suele salir mal en esta etapa para no repetirlo.</p>
     <div class="errors">
       <div class="err"><div><small>Error</small><span class="e">Demasiados detalles</span></div><div><small>Por qué ocurre</small>Se quiere contar toda la historia en el logo.</div><div><small>Cómo corregirlo</small>Un logo identifica; no explica. Quita elementos hasta que no puedas quitar más.</div></div>
       <div class="err"><div><small>Error</small><span class="e">Diseñar solo para la pantalla</span></div><div><small>Por qué ocurre</small>Se trabaja en el celular.</div><div><small>Cómo corregirlo</small>Imprime y prueba en la bolsa real congelada.</div></div>
       <div class="err"><div><small>Error</small><span class="e">Clichés de la categoría</span></div><div><small>Por qué ocurre</small>Copo de nieve + pingüino es lo primero que se ocurre.</div><div><small>Cómo corregirlo</small>Revisa tu matriz: si todos lo usan, busca otra idea.</div></div>
     </div></div>
-  <div class="block"><h3>Recomendaciones para principiantes</h3>
+  <div class="block"><h3>Recomendaciones para principiantes</h3><p class="hint">Consejos cortos para tener a mano mientras trabajas.</p>
     <ul class="tips"><li><b>En Canva</b>, trabaja con formas y textos propios en lugar de plantillas de logo: muchas plantillas las usan miles de negocios y los términos de Canva pueden limitar el uso de sus plantillas como marca registrada; revísalos.</li><li><b>Si puedes, contrata una revisión profesional</b> de tu boceto final: es más económico que rediseñar después de imprimir.</li><li><b>Guarda una versión en blanco y negro</b> desde el inicio: si funciona así, funcionará con color.</li></ul></div>
-  <div class="block"><h3>Actividad guiada</h3>
+  <div class="block"><h3>Actividad guiada</h3><p class="hint">Haz este ejercicio con tu propio negocio. Te deja listas las respuestas de la plantilla.</p>
     <div class="activity"><div class="meta"><span class="chip">4 a 6 horas</span><span class="chip">Lápiz, papel y Canva</span></div><p>Crea tres propuestas conceptuales de logotipo (cada una con su concepto escrito), pruébalas a tamaño pequeño y en una tinta, y selecciona una. Documenta versiones y justificación.</p></div></div>
-  <div class="block"><h3>Plantilla para completar</h3><div class="tpl" data-tpl="t7"></div></div>
+  <div class="block"><h3>Plantilla para completar</h3><p class="hint">Escribe aquí tus respuestas. Se guardan en este navegador; al terminar, descarga la ficha y envíala.</p><div class="tpl" data-tpl="t7"></div></div>
   <div class="block"><div class="deliver"><svg aria-hidden="true"><use href="#i-box"/></svg><div><span class="eyebrow">Entregable del módulo</span><p>Logotipo principal, versiones alternativas y justificación conceptual</p></div></div></div>
-  <div class="block"><h3>Lista de verificación antes de continuar</h3>
+  <div class="block"><h3>Lista de verificación antes de continuar</h3><p class="hint">Marca cada punto que ya cumples. Si falta alguno, vuelve a ese paso antes de avanzar.</p>
     <ul class="check" data-check="m6"><li>Hice al menos 20 bocetos a mano.</li><li>Comparé 3 propuestas con su concepto escrito.</li><li>Mi logo funciona en una tinta y en negativo.</li><li>Se lee a 1,5 cm de ancho impreso.</li><li>Tengo versión horizontal, vertical y símbolo solo.</li><li>Guardé archivos PNG transparente, PDF y editable.</li></ul></div>
-  <div class="block"><h3>Criterios para evaluar el resultado</h3>
+  <div class="block"><h3>Criterios para evaluar el resultado</h3><p class="hint">Compara tu entregable con estos criterios para saber si quedó bien hecho.</p>
     <div class="criteria"><div><b>Simplicidad</b>Se puede dibujar de memoria en 10 segundos.</div><div><b>Legibilidad</b>Se reconoce pequeño y con escarcha.</div><div><b>Coherencia</b>La justificación conecta formas con estrategia.</div><div><b>Originalidad</b>No se parece a la competencia de tu matriz.</div></div></div>
 </section>
 
@@ -1125,7 +1128,7 @@ body.dl-on .dl-btn{display:inline-block}
     <div><b>Cómo sé si va bien</b>Tu texto pasa la prueba de contraste y tu bolsa destaca en el estante.</div>
     <div><b>Qué debo terminar</b>Paleta cromática documentada.</div>
   </div>
-  <div class="block"><h3>Conceptos fundamentales</h3>
+  <div class="block"><h3>Conceptos fundamentales</h3><p class="hint">Lee las definiciones clave del módulo. Las vas a usar al completar la plantilla.</p>
     <dl class="terms">
       <div class="term"><dt>Paleta cromática</dt><dd>El conjunto limitado de colores que usa la marca, cada uno con una función.</dd><span class="ex">Verde principal, amarillo de acento, carbón para textos.</span></div>
       <div class="term"><dt>Cálidos y fríos</dt><dd>Cálidos (rojos, naranjas, amarillos) se perciben cercanos y enérgicos; fríos (azules, verdes azulados) se perciben calmados y frescos.</dd><span class="ex">Un azul hielo comunica «frío»; un naranja comunica «comida caliente».</span></div>
@@ -1138,10 +1141,10 @@ body.dl-on .dl-btn{display:inline-block}
       <div class="term"><dt>CMYK</dt><dd>Mezcla de tintas cian, magenta, amarillo y negro para imprimir. El mismo color se ve distinto impreso que en pantalla.</dd><span class="ex">Pide al impresor una prueba de color antes de imprimir miles de bolsas.</span></div>
     </dl></div>
 
-  <div class="block"><h3>Psicología del color: útil pero limitada</h3>
+  <div class="block"><h3>Psicología del color: útil pero limitada</h3><p class="hint">Entiende qué puede y qué no puede comunicar un color por sí solo.</p>
     <div class="note"><p>Las asociaciones de colores (verde = natural, rojo = apetito) son <b>tendencias culturales</b>, no leyes. Cambian según el país, la generación y la categoría. Además, si todo tu estante usa verde para «natural», el verde deja de diferenciarte. Usa la psicología del color como punto de partida y comprueba siempre con tu matriz de competencia y con clientes reales.</p></div></div>
 
-  <div class="block"><h3>Direcciones cromáticas por categoría <span class="tag">ejemplos orientativos</span></h3>
+  <div class="block"><h3>Direcciones cromáticas por categoría <span class="tag">ejemplos orientativos</span></h3><p class="hint">Busca tu categoría y mira qué colores suelen usarse y por qué.</p>
     <div class="stack">
       <div class="palrow"><div><b>Vegetales</b><p class="small muted">Naturalidad y frescura; el verde es común, un acento cálido diferencia.</p></div><div class="palette" data-pal="#2E6B3F,#7DB246,#F2B632,#F4F1E6,#1F2A24"></div></div>
       <div class="palrow"><div><b>Frutas</b><p class="small muted">Color real de la fruta como protagonista, fondos limpios.</p></div><div class="palette" data-pal="#C2185B,#F06292,#FFB300,#FFF8F0,#3E2723"></div></div>
@@ -1152,7 +1155,7 @@ body.dl-on .dl-btn{display:inline-block}
       <div class="palrow"><div><b>Postres congelados</b><p class="small muted">Pasteles con acentos intensos: placer y ocasión.</p></div><div class="palette" data-pal="#F7A8B8,#FFE5A0,#6C3483,#FFFAFC,#3B1F2B"></div></div>
     </div></div>
 
-  <div class="block"><h3>Paso a paso: construir tu paleta</h3>
+  <div class="block"><h3>Paso a paso: construir tu paleta</h3><p class="hint">Sigue los pasos para elegir tus colores y anotar sus códigos.</p>
     <ol class="steps">
       <li><div><b>Parte de la estrategia y la competencia.</b><p class="how">¿Qué deben sentir? (personalidad) ¿Qué colores dominan el estante? (matriz). Busca el equilibrio entre pertenecer a la categoría y destacar.</p></div></li>
       <li><div><b>Elige el color principal.</b><p class="how">Es el que más área ocupa y el que la gente recordará. Debe permitir texto blanco o negro encima con buen contraste.</p></div></li>
@@ -1165,7 +1168,7 @@ body.dl-on .dl-btn{display:inline-block}
       <li><div><b>Documenta los códigos.</b><p class="how">Anota HEX y RGB para pantalla, y CMYK (o Pantone, si tu impresor lo usa) para impresión. Pide al impresor los valores CMYK definitivos según su máquina y material.</p></div></li>
     </ol></div>
 
-  <div class="block"><h3>Herramienta: comprueba el contraste</h3>
+  <div class="block"><h3>Herramienta: comprueba el contraste</h3><p class="hint">Prueba tus colores aquí para saber si el texto se lee bien sobre ellos.</p>
     <div class="card">
       <div class="contrast">
         <div class="f"><label for="c-fg"><b>Color del texto</b></label><input id="c-fg" type="color" value="#FFFFFF" style="width:100%;height:44px"></div>
@@ -1176,7 +1179,7 @@ body.dl-on .dl-btn{display:inline-block}
       <p class="small muted" style="margin-top:8px">La fórmula es la del estándar WCAG 2. El valor CMYK que verás en las paletas es una conversión matemática aproximada; el valor real depende de la impresora, la tinta y el material.</p>
     </div></div>
 
-  <div class="block"><h3>Ejemplo resuelto</h3>
+  <div class="block"><h3>Ejemplo resuelto</h3><p class="hint">Mira cómo Marcela resolvió este paso en Cosecha Lista. Después harás lo mismo con tu negocio.</p>
     <div class="solved"><span class="stamp">Ejemplo resuelto · ficticio</span>
       <h4>Paleta de Cosecha Lista</h4>
       <div class="palette" data-pal="#2E6B3F,#CFE6EE,#F2B632,#1F2A24,#FAFBF8" data-names="Verde huerta · principal,Azul escarcha · secundario,Amarillo mazorca · acento,Carbón · texto,Blanco · fondo info" data-full="1" style="min-height:150px"></div>
@@ -1185,22 +1188,22 @@ body.dl-on .dl-btn{display:inline-block}
       <p class="why"><b>Justificación:</b> el verde conecta con la categoría pero en un tono más profundo que la competencia; el azul escarcha comunica «congelado» de forma suave; el amarillo mazorca es el acento cálido que nadie usaba en el estante (conclusión del Módulo 2) y recuerda la papa criolla. Probamos: el texto blanco sobre verde huerta y el carbón sobre amarillo superan 4,5 : 1. El amarillo nunca se usa para texto sobre blanco porque no alcanza el contraste necesario.</p>
     </div></div>
 
-  <div class="block"><h3>Errores comunes</h3>
+  <div class="block"><h3>Errores comunes</h3><p class="hint">Revisa lo que suele salir mal en esta etapa para no repetirlo.</p>
     <div class="errors">
       <div class="err"><div><small>Error</small><span class="e">Usar demasiados colores</span></div><div><small>Por qué ocurre</small>Cada color parece aportar algo.</div><div><small>Cómo corregirlo</small>Máximo 3 a 5 en la paleta base; los de producto son un sistema aparte.</div></div>
       <div class="err"><div><small>Error</small><span class="e">Elegir solo por gusto personal</span></div><div><small>Por qué ocurre</small>«Es mi color favorito».</div><div><small>Cómo corregirlo</small>Justifica cada color con estrategia y competencia.</div></div>
       <div class="err"><div><small>Error</small><span class="e">Texto con poco contraste</span></div><div><small>Por qué ocurre</small>En pantalla grande parece legible.</div><div><small>Cómo corregirlo</small>Mide con la calculadora y prueba impreso.</div></div>
       <div class="err"><div><small>Error</small><span class="e">Colores que tiñen la comida</span></div><div><small>Por qué ocurre</small>Un fondo verde o azul fuerte junto a una foto de carne la hace ver poco apetitosa.</div><div><small>Cómo corregirlo</small>Prueba la foto del producto sobre cada color.</div></div>
     </div></div>
-  <div class="block"><h3>Recomendaciones prácticas</h3>
+  <div class="block"><h3>Recomendaciones prácticas</h3><p class="hint">Consejos cortos para tener a mano mientras trabajas.</p>
     <ul class="tips"><li><b>Coolors y Adobe Color</b> generan combinaciones a partir de un color o de una foto de tu producto.</li><li><b>Saca los colores de tu propio producto:</b> toma una foto de tus verduras y extrae los tonos con Adobe Color.</li><li><b>Pide una prueba física</b> al impresor antes del tiraje completo.</li></ul></div>
-  <div class="block"><h3>Actividad guiada</h3>
+  <div class="block"><h3>Actividad guiada</h3><p class="hint">Haz este ejercicio con tu propio negocio. Te deja listas las respuestas de la plantilla.</p>
     <div class="activity"><div class="meta"><span class="chip">2 a 3 horas</span><span class="chip">Coolors o Adobe Color</span></div><p>Crea tres paletas distintas (por ejemplo: segura para la categoría, diferenciadora y arriesgada), revisa el contraste de cada una y justifica la selección final.</p></div></div>
-  <div class="block"><h3>Plantilla para completar</h3><div class="tpl" data-tpl="t8"></div></div>
+  <div class="block"><h3>Plantilla para completar</h3><p class="hint">Escribe aquí tus respuestas. Se guardan en este navegador; al terminar, descarga la ficha y envíala.</p><div class="tpl" data-tpl="t8"></div></div>
   <div class="block"><div class="deliver"><svg aria-hidden="true"><use href="#i-box"/></svg><div><span class="eyebrow">Entregable del módulo</span><p>Paleta cromática documentada (HEX, RGB, CMYK de referencia)</p></div></div></div>
-  <div class="block"><h3>Lista de verificación antes de continuar</h3>
+  <div class="block"><h3>Lista de verificación antes de continuar</h3><p class="hint">Marca cada punto que ya cumples. Si falta alguno, vuelve a ese paso antes de avanzar.</p>
     <ul class="check" data-check="m7"><li>Mi paleta tiene principal, secundario, acento y neutros.</li><li>Tengo entre 3 y 5 colores base.</li><li>Comprobé contraste de las combinaciones texto/fondo.</li><li>Probé la paleta impresa y en el congelador.</li><li>Documenté HEX, RGB y CMYK de referencia.</li></ul></div>
-  <div class="block"><h3>Criterios para evaluar el resultado</h3>
+  <div class="block"><h3>Criterios para evaluar el resultado</h3><p class="hint">Compara tu entregable con estos criterios para saber si quedó bien hecho.</p>
     <div class="criteria"><div><b>Función</b>Cada color tiene un uso definido.</div><div><b>Legibilidad</b>Combinaciones de texto ≥ 4,5 : 1.</div><div><b>Diferenciación</b>Destaca frente a la competencia sin salir de la categoría.</div></div></div>
 </section>
 
@@ -1215,7 +1218,7 @@ body.dl-on .dl-btn{display:inline-block}
     <div><b>Cómo sé si va bien</b>Se distingue título, subtítulo e información sin esfuerzo.</div>
     <div><b>Qué debo terminar</b>Sistema tipográfico de la marca.</div>
   </div>
-  <div class="block"><h3>Conceptos fundamentales</h3>
+  <div class="block"><h3>Conceptos fundamentales</h3><p class="hint">Lee las definiciones clave del módulo. Las vas a usar al completar la plantilla.</p>
     <div class="grid2">
       <div class="spec"><span class="big" style="font-family:'Fraunces',serif;font-weight:700">Serif · Fraunces</span><span>Con remates en los extremos. Tradición, artesanía, calidad.</span><span class="meta">Ej.: helados artesanales, carnes premium</span></div>
       <div class="spec"><span class="big" style="font-family:'Nunito Sans',sans-serif;font-weight:800">Sans serif · Nunito Sans</span><span>Sin remates. Claridad, modernidad, cercanía.</span><span class="meta">Ej.: verduras, comidas prácticas</span></div>
@@ -1231,7 +1234,7 @@ body.dl-on .dl-btn{display:inline-block}
       <div class="term"><dt>Licencia</dt><dd>Permiso legal para usar una fuente. No todas las fuentes gratuitas permiten uso comercial.</dd><span class="ex">Las de Google Fonts se publican con licencias abiertas que permiten uso comercial (revisa la licencia de cada familia).</span></div>
     </dl></div>
 
-  <div class="block"><h3>Paso a paso: elegir tu sistema</h3>
+  <div class="block"><h3>Paso a paso: elegir tu sistema</h3><p class="hint">Sigue los pasos para escoger tus tipografías y sus usos.</p>
     <ol class="steps">
       <li><div><b>Traduce la personalidad en rasgos de letra.</b><p class="how">Cercana → terminaciones redondeadas. Tradicional → serif. Práctica → sans serif clara.</p></div></li>
       <li><div><b>Elige la tipografía principal (títulos y nombre de producto).</b><p class="how">Es la que da carácter. Pruébala con el nombre de tu producto más largo.</p></div></li>
@@ -1242,14 +1245,14 @@ body.dl-on .dl-btn{display:inline-block}
       <li><div><b>Aplica las 3 combinaciones al mismo empaque y compara.</b><p class="how">Imprime los tres bocetos, ponlos juntos y pregunta a 3 personas cuál «se ve más» como tu marca.</p></div></li>
     </ol></div>
 
-  <div class="block"><h3>Comparación: tres combinaciones en el mismo empaque <span class="tag">Google Fonts</span></h3>
+  <div class="block"><h3>Comparación: tres combinaciones en el mismo empaque <span class="tag">Google Fonts</span></h3><p class="hint">Compara cómo cambia un empaque con distintas tipografías.</p>
     <div class="shelf">
       <div class="figure"><div class="bag" style="--c:#4E8A2E"><div class="lg-row"><svg aria-hidden="true"><use href="#iso"/></svg>Cosecha Lista</div><div class="pname">Arveja con zanahoria</div><div class="desc">Lista para la olla en 10 min</div><div class="art"><svg viewBox="0 0 120 90" aria-hidden="true"><use href="#art-arveja"/></svg></div><div class="foot"><span class="net">500 g</span></div></div><p class="cap"><b>A · elegida</b><br>Bricolage Grotesque + Nunito Sans</p></div>
       <div class="figure"><div class="bag" style="--c:#4E8A2E"><div class="lg-row" style="font-family:'Fraunces'"><svg aria-hidden="true"><use href="#iso"/></svg>Cosecha Lista</div><div class="pname" style="font-family:'Fraunces';font-weight:700">Arveja con zanahoria</div><div class="desc" style="font-family:'Work Sans'">Lista para la olla en 10 min</div><div class="art"><svg viewBox="0 0 120 90" aria-hidden="true"><use href="#art-arveja"/></svg></div><div class="foot"><span class="net" style="font-family:'Work Sans'">500 g</span></div></div><p class="cap"><b>B</b><br>Fraunces + Work Sans</p></div>
       <div class="figure"><div class="bag" style="--c:#4E8A2E"><div class="lg-row" style="font-family:'Bebas Neue';font-weight:400;letter-spacing:.04em"><svg aria-hidden="true"><use href="#iso"/></svg>COSECHA LISTA</div><div class="pname" style="font-family:'Bebas Neue';font-weight:400;font-size:1.7rem">ARVEJA CON ZANAHORIA</div><div class="desc" style="font-family:'Atkinson Hyperlegible'">Lista para la olla en 10 min</div><div class="art"><svg viewBox="0 0 120 90" aria-hidden="true"><use href="#art-arveja"/></svg></div><div class="foot"><span class="net">500 g</span></div></div><p class="cap"><b>C</b><br>Bebas Neue + Atkinson Hyperlegible</p></div>
     </div></div>
 
-  <div class="block"><h3>Ejemplo resuelto</h3>
+  <div class="block"><h3>Ejemplo resuelto</h3><p class="hint">Mira cómo Marcela resolvió este paso en Cosecha Lista. Después harás lo mismo con tu negocio.</p>
     <div class="solved"><span class="stamp">Ejemplo resuelto · ficticio</span>
       <h4>Sistema tipográfico de Cosecha Lista</h4>
       <div class="scroll ref"><table>
@@ -1262,21 +1265,21 @@ body.dl-on .dl-btn{display:inline-block}
       <p class="why"><b>Por qué la combinación A:</b> en la prueba con 3 personas, la B se percibió «elegante pero cara» (no coincide con Diana) y la C «de comida rápida». La A se percibió «cercana y clara». La condensada para la información permite que la tabla quepa en el reverso sin reducir el tamaño de la letra.</p>
     </div></div>
 
-  <div class="block"><h3>Errores comunes</h3>
+  <div class="block"><h3>Errores comunes</h3><p class="hint">Revisa lo que suele salir mal en esta etapa para no repetirlo.</p>
     <div class="errors">
       <div class="err"><div><small>Error</small><span class="e">Mezclar muchas tipografías</span></div><div><small>Por qué ocurre</small>Cada texto «merece» su letra.</div><div><small>Cómo corregirlo</small>Máximo 2 familias y 1 de apoyo. Crea jerarquía con tamaño y peso.</div></div>
       <div class="err"><div><small>Error</small><span class="e">Script en textos largos</span></div><div><small>Por qué ocurre</small>Se ve cálida y artesanal.</div><div><small>Cómo corregirlo</small>Úsala solo para una palabra o firma.</div></div>
       <div class="err"><div><small>Error</small><span class="e">Usar fuentes sin licencia comercial</span></div><div><small>Por qué ocurre</small>Se descargan de sitios «gratis».</div><div><small>Cómo corregirlo</small>Usa Google Fonts o compra la licencia.</div></div>
     </div></div>
-  <div class="block"><h3>Recomendaciones prácticas</h3>
+  <div class="block"><h3>Recomendaciones prácticas</h3><p class="hint">Consejos cortos para tener a mano mientras trabajas.</p>
     <ul class="tips"><li><b>Prueba con tu texto real</b>, no con «Lorem ipsum»: los nombres largos cambian todo.</li><li><b>Evita mayúsculas en párrafos.</b> Se leen más despacio.</li><li><b>En Canva</b> puedes subir fuentes solo con plan de pago; muchas de Google Fonts ya están disponibles en la versión gratuita.</li></ul></div>
-  <div class="block"><h3>Actividad guiada</h3>
+  <div class="block"><h3>Actividad guiada</h3><p class="hint">Haz este ejercicio con tu propio negocio. Te deja listas las respuestas de la plantilla.</p>
     <div class="activity"><div class="meta"><span class="chip">2 horas</span><span class="chip">Google Fonts + Canva</span></div><p>Crea tres combinaciones tipográficas, aplícalas al mismo boceto de empaque, compáralas con 3 personas y documenta la elegida con pesos, tamaños y licencia.</p></div></div>
-  <div class="block"><h3>Plantilla para completar</h3><div class="tpl" data-tpl="t9"></div></div>
+  <div class="block"><h3>Plantilla para completar</h3><p class="hint">Escribe aquí tus respuestas. Se guardan en este navegador; al terminar, descarga la ficha y envíala.</p><div class="tpl" data-tpl="t9"></div></div>
   <div class="block"><div class="deliver"><svg aria-hidden="true"><use href="#i-box"/></svg><div><span class="eyebrow">Entregable del módulo</span><p>Sistema tipográfico de la marca</p></div></div></div>
-  <div class="block"><h3>Lista de verificación antes de continuar</h3>
+  <div class="block"><h3>Lista de verificación antes de continuar</h3><p class="hint">Marca cada punto que ya cumples. Si falta alguno, vuelve a ese paso antes de avanzar.</p>
     <ul class="check" data-check="m8"><li>Tengo principal, secundaria e información definidas.</li><li>Comparé 3 combinaciones aplicadas al empaque.</li><li>Definí escala de tamaños y pesos.</li><li>Verifiqué la licencia comercial de cada fuente.</li></ul></div>
-  <div class="block"><h3>Criterios para evaluar el resultado</h3>
+  <div class="block"><h3>Criterios para evaluar el resultado</h3><p class="hint">Compara tu entregable con estos criterios para saber si quedó bien hecho.</p>
     <div class="criteria"><div><b>Jerarquía</b>Se lee primero el producto, luego la marca, luego el detalle.</div><div><b>Legibilidad</b>La información pequeña se lee impresa.</div><div><b>Coherencia</b>La personalidad tipográfica coincide con la de marca.</div></div></div>
 </section>
 
@@ -1291,7 +1294,7 @@ body.dl-on .dl-btn{display:inline-block}
     <div><b>Cómo sé si va bien</b>Las imágenes de tu biblioteca parecen de la misma marca y muestran el producto real.</div>
     <div><b>Qué debo terminar</b>Biblioteca visual y dirección de arte.</div>
   </div>
-  <div class="block"><h3>Conceptos fundamentales</h3>
+  <div class="block"><h3>Conceptos fundamentales</h3><p class="hint">Lee las definiciones clave del módulo. Las vas a usar al completar la plantilla.</p>
     <dl class="terms">
       <div class="term"><dt>Lenguaje visual</dt><dd>El estilo constante con que la marca muestra imágenes: luz, encuadre, color, textura.</dd><span class="ex">Siempre vista cenital, luz natural, fondo claro.</span></div>
       <div class="term"><dt>Fotografía de producto</dt><dd>Muestra el alimento tal como es, normalmente aislado.</dd><span class="ex">Cubos de ahuyama sobre fondo blanco.</span></div>
@@ -1303,7 +1306,7 @@ body.dl-on .dl-btn{display:inline-block}
       <div class="term"><dt>Licencia de imagen</dt><dd>Permiso de uso. «La encontré en Google» no es una licencia.</dd><span class="ex">Bancos como Unsplash o Pexels tienen licencias propias; léelas antes de usar en un empaque.</span></div>
     </dl></div>
 
-  <div class="block"><h3>Comparación visual: encuadres de fotografía de alimentos</h3>
+  <div class="block"><h3>Comparación visual: encuadres de fotografía de alimentos</h3><p class="hint">Conoce los encuadres más usados y elige los que van con tu marca.</p>
     <div class="diagram"><svg viewBox="0 0 760 200" role="img" aria-label="Tres encuadres: cenital, 45 grados y frontal">
       <g transform="translate(20,20)"><rect width="220" height="130" rx="10" class="d-fill"/><circle cx="110" cy="65" r="45" class="d-acc"/><circle cx="95" cy="55" r="8" class="d-line"/><circle cx="122" cy="72" r="9" class="d-line"/><rect x="100" y="38" width="16" height="8" rx="3" class="d-line"/><text x="110" y="160" text-anchor="middle" class="d-txt">Cenital (desde arriba)</text><text x="110" y="176" text-anchor="middle" class="d-sm">ideal para mezclas, cortes y bowls</text></g>
       <g transform="translate(270,20)"><rect width="220" height="130" rx="10" class="d-fill"/><ellipse cx="110" cy="80" rx="70" ry="28" class="d-acc"/><path d="M50 78 Q110 30 170 78" class="d-line"/><text x="110" y="160" text-anchor="middle" class="d-txt">45 grados</text><text x="110" y="176" text-anchor="middle" class="d-sm">platos servidos, apetito, volumen</text></g>
@@ -1315,7 +1318,7 @@ body.dl-on .dl-btn{display:inline-block}
       <div class="card"><h4>Iconos funcionales</h4><p class="small">Pictogramas de preparación y conservación. Deben compartir grosor de línea, esquinas y tamaño.</p></div>
     </div></div>
 
-  <div class="block"><h3>Paso a paso: definir tu dirección de arte</h3>
+  <div class="block"><h3>Paso a paso: definir tu dirección de arte</h3><p class="hint">Define cómo se verán tus fotos, ilustraciones e íconos.</p>
     <ol class="steps">
       <li><div><b>Decide fotografía, ilustración o mezcla.</b><p class="how">Fotografía si tu producto se ve apetitoso y puedes conseguir buenas fotos; ilustración si quieres unificar muchas referencias o tu presupuesto es bajo.</p></div></li>
       <li><div><b>Crea el moodboard.</b><p class="how">En Pinterest o Canva reúne 9 a 15 imágenes: fotos de comida con la luz que quieres, texturas, iconos, ilustraciones, colores. Elimina lo que no encaje con tu personalidad.</p></div></li>
@@ -1326,13 +1329,13 @@ body.dl-on .dl-btn{display:inline-block}
       <li><div><b>Organiza la biblioteca.</b><p class="how">Carpetas: fotos de producto, fotos de uso, ilustraciones, iconos, patrones. Nombra los archivos con producto y fecha. Guarda junto a cada imagen su licencia o la autorización del fotógrafo.</p></div></li>
     </ol></div>
 
-  <div class="block"><h3>Uso responsable de imágenes generadas con IA</h3>
+  <div class="block"><h3>Uso responsable de imágenes generadas con IA</h3><p class="hint">Revisa estas reglas si vas a usar imágenes hechas con inteligencia artificial.</p>
     <div class="compare">
       <div class="no"><h4><svg width="18" height="18"><use href="#i-x"/></svg>Uso problemático</h4><p class="small">Generar una foto de «sudado perfecto» con carne y hogao cuando tu producto solo contiene verduras, o mostrar cubos más grandes y brillantes que los reales. Puede inducir a error al consumidor y generar quejas.</p></div>
       <div class="yes"><h4><svg width="18" height="18"><use href="#i-check"/></svg>Uso responsable</h4><p class="small">Usar IA para explorar estilos en el moodboard, crear fondos o texturas, o bocetar ilustraciones que luego se ajustan al producto real. Revisar siempre los términos de uso comercial de la herramienta. Si sugieres un acompañamiento, indícalo (por ejemplo, «sugerencia de presentación»).</p></div>
     </div></div>
 
-  <div class="block"><h3>Ejemplo resuelto</h3>
+  <div class="block"><h3>Ejemplo resuelto</h3><p class="hint">Mira cómo Marcela resolvió este paso en Cosecha Lista. Después harás lo mismo con tu negocio.</p>
     <div class="solved"><span class="stamp">Ejemplo resuelto · ficticio</span>
       <h4>Dirección de arte de Cosecha Lista</h4>
       <dl class="kv">
@@ -1345,21 +1348,21 @@ body.dl-on .dl-btn{display:inline-block}
       <p class="why"><b>Conexión con la estrategia:</b> la ilustración transmite cercanía; la foto real del plato responde a la preocupación de Diana («¿quedará aguada?»), porque muestra el resultado real.</p>
     </div></div>
 
-  <div class="block"><h3>Errores comunes</h3>
+  <div class="block"><h3>Errores comunes</h3><p class="hint">Revisa lo que suele salir mal en esta etapa para no repetirlo.</p>
     <div class="errors">
       <div class="err"><div><small>Error</small><span class="e">Fotos que no representan el producto</span></div><div><small>Por qué ocurre</small>Las fotos de banco o IA se ven mejor.</div><div><small>Cómo corregirlo</small>Fotografía tu producto real cocinado según tus instrucciones.</div></div>
       <div class="err"><div><small>Error</small><span class="e">Mezclar estilos</span></div><div><small>Por qué ocurre</small>Se toman imágenes de muchas fuentes.</div><div><small>Cómo corregirlo</small>Aplica las 5 reglas a cada imagen antes de usarla.</div></div>
       <div class="err"><div><small>Error</small><span class="e">Usar imágenes sin licencia</span></div><div><small>Por qué ocurre</small>Se descargan de Google.</div><div><small>Cómo corregirlo</small>Usa bancos con licencia clara o tus propias fotos y guarda el comprobante.</div></div>
     </div></div>
-  <div class="block"><h3>Recomendaciones prácticas</h3>
+  <div class="block"><h3>Recomendaciones prácticas</h3><p class="hint">Consejos cortos para tener a mano mientras trabajas.</p>
     <ul class="tips"><li><b>Una hoja de papel blanco</b> frente a la ventana sirve como rebote de luz para fotos con celular.</li><li><b>Fotografía con el producto recién cocinado</b>: los vegetales pierden brillo en minutos.</li><li><b>Mantén una versión del moodboard en Pinterest</b> en modo secreto para consultarla mientras diseñas.</li></ul></div>
-  <div class="block"><h3>Actividad guiada</h3>
+  <div class="block"><h3>Actividad guiada</h3><p class="hint">Haz este ejercicio con tu propio negocio. Te deja listas las respuestas de la plantilla.</p>
     <div class="activity"><div class="meta"><span class="chip">3 horas</span><span class="chip">Pinterest o Canva + celular</span></div><p>Crea un moodboard de referencia visual con 9 imágenes, escribe tus 5 reglas de imagen y toma al menos 5 fotos reales de tu producto siguiendo esas reglas.</p></div></div>
-  <div class="block"><h3>Plantilla para completar</h3><div class="tpl" data-tpl="t7b"></div></div>
+  <div class="block"><h3>Plantilla para completar</h3><p class="hint">Escribe aquí tus respuestas. Se guardan en este navegador; al terminar, descarga la ficha y envíala.</p><div class="tpl" data-tpl="t7b"></div></div>
   <div class="block"><div class="deliver"><svg aria-hidden="true"><use href="#i-box"/></svg><div><span class="eyebrow">Entregable del módulo</span><p>Biblioteca visual y dirección de arte de la marca</p></div></div></div>
-  <div class="block"><h3>Lista de verificación antes de continuar</h3>
+  <div class="block"><h3>Lista de verificación antes de continuar</h3><p class="hint">Marca cada punto que ya cumples. Si falta alguno, vuelve a ese paso antes de avanzar.</p>
     <ul class="check" data-check="m9"><li>Tengo un moodboard de 9 a 15 imágenes.</li><li>Escribí 5 reglas de imagen.</li><li>Tomé fotos reales de mi producto.</li><li>Elegí un set de iconos coherente.</li><li>Guardé las licencias de cada imagen.</li></ul></div>
-  <div class="block"><h3>Criterios para evaluar el resultado</h3>
+  <div class="block"><h3>Criterios para evaluar el resultado</h3><p class="hint">Compara tu entregable con estos criterios para saber si quedó bien hecho.</p>
     <div class="criteria"><div><b>Coherencia</b>Las imágenes parecen de la misma marca.</div><div><b>Honestidad</b>Las imágenes representan el producto real.</div><div><b>Legalidad</b>Cada recurso tiene licencia o autorización.</div></div></div>
 </section>
 
@@ -1375,7 +1378,7 @@ body.dl-on .dl-btn{display:inline-block}
     <div><b>Qué debo terminar</b>Prototipo frontal y posterior de un producto.</div>
   </div>
 
-  <div class="block"><h3>Conceptos fundamentales</h3>
+  <div class="block"><h3>Conceptos fundamentales</h3><p class="hint">Lee las definiciones clave del módulo. Las vas a usar al completar la plantilla.</p>
     <dl class="terms">
       <div class="term"><dt>Packaging</dt><dd>El diseño integral del envase: estructura, material, gráfica e información.</dd><span class="ex">La bolsa, su cierre, su impresión y su texto.</span></div>
       <div class="term"><dt>Funciones funcionales</dt><dd>Contener, proteger, conservar, transportar, informar y facilitar el uso.</dd><span class="ex">Una bolsa con cierre hermético que permite usar la mitad y guardar el resto.</span></div>
@@ -1387,7 +1390,7 @@ body.dl-on .dl-btn{display:inline-block}
       <div class="term"><dt>Sellado</dt><dd>Unión que cierra el empaque; debe resistir frío, golpes y manipulación.</dd><span class="ex">Sello térmico en la parte superior e inferior de la bolsa.</span></div>
     </dl></div>
 
-  <div class="block"><h3>Formatos frecuentes en congelados <span class="tag">comparación orientativa</span></h3>
+  <div class="block"><h3>Formatos frecuentes en congelados <span class="tag">comparación orientativa</span></h3><p class="hint">Compara bolsas, cajas y bandejas para elegir el formato de tu producto.</p>
     <div class="scroll ref"><table>
       <thead><tr><th>Formato</th><th>Usos típicos</th><th>Ventajas</th><th>Limitaciones a considerar</th></tr></thead>
       <tbody>
@@ -1400,7 +1403,7 @@ body.dl-on .dl-btn{display:inline-block}
       </tbody></table></div>
     <div class="note warn" style="margin-top:12px"><p><b>Importante:</b> la selección del material (tipo de película, calibre, laminación, tintas, adhesivos) y sus especificaciones técnicas de barrera, sellado, humedad, resistencia y compatibilidad con temperaturas de congelación <b>debe validarse con tu proveedor de empaques y con especialistas en envases para alimentos</b>. Pide fichas técnicas y certificados de aptitud para contacto con alimentos. Esta guía no recomienda un material específico.</p></div></div>
 
-  <div class="block"><h3>Caras y zonas del empaque</h3>
+  <div class="block"><h3>Caras y zonas del empaque</h3><p class="hint">Conoce qué va en cada cara del empaque y en qué orden se lee.</p>
     <div class="diagram"><svg viewBox="0 0 760 330" role="img" aria-label="Plano desplegado de una caja con sus caras: superior, frente, lateral, posterior, inferior">
       <rect x="160" y="10" width="200" height="60" class="d-fill"/><text x="260" y="44" text-anchor="middle" class="d-txt">Superior</text>
       <rect x="40" y="70" width="120" height="190" class="d-fill"/><text x="100" y="160" text-anchor="middle" class="d-txt">Lateral</text><text x="100" y="178" text-anchor="middle" class="d-sm">preparación / iconos</text>
@@ -1413,7 +1416,7 @@ body.dl-on .dl-btn{display:inline-block}
     <p class="cap">En una bolsa flexible hay solo frente y reverso, más las zonas de sellado arriba y abajo donde no conviene poner texto importante.</p>
   </div>
 
-  <div class="block"><h3>Paso a paso: diseñar la cara frontal</h3>
+  <div class="block"><h3>Paso a paso: diseñar la cara frontal</h3><p class="hint">Organiza el frente del empaque: nombre, producto, beneficio e imagen.</p>
     <ol class="steps">
       <li><div><b>Ubica el logotipo.</b><p class="how">En el tercio superior y siempre en el mismo lugar en toda la familia. No necesita ser lo más grande: el producto lo es.</p></div></li>
       <li><div><b>Identifica claramente el producto.</b><p class="how">El nombre de lo que contiene (por ejemplo «Arveja con zanahoria») es el texto más grande. El cliente busca primero el producto, luego la marca.</p></div></li>
@@ -1424,13 +1427,13 @@ body.dl-on .dl-btn{display:inline-block}
       <li><div><b>Revisa la legibilidad.</b><p class="how">Imprime a tamaño real, congela 30 minutos y míralo a 1 metro. Reserva espacio para los sellos frontales de advertencia si tu producto los requiere.</p></div></li>
     </ol></div>
 
-  <div class="block"><h3>Comparación: jerarquía clara y jerarquía confusa</h3>
+  <div class="block"><h3>Comparación: jerarquía clara y jerarquía confusa</h3><p class="hint">Compara dos frentes y aprende a destacar lo más importante.</p>
     <div class="shelf">
       <div class="figure"><div class="bag bad"><div class="burst">¡SÚPER<br>OFERTA!</div><div style="font-family:'Caveat';font-size:1.3rem;color:#FFE100">¡Nuevo!</div><div style="font-size:1.05rem;letter-spacing:.05em">COSECHA LISTA PREMIUM GOURMET</div><div style="font-family:'Fraunces';font-style:italic;font-size:.7rem">verduras naturales 100% saludables y deliciosas</div><div style="font-family:'Work Sans';font-size:.6rem;margin-top:4px">arveja zanahoria</div><div class="art"><svg viewBox="0 0 120 90" aria-hidden="true"><use href="#art-ahuyama"/></svg></div><div style="font-size:.55rem;font-family:'Work Sans'">Sin conservantes · Sin colorantes · Rico en fibra · Bajo en grasa · Ideal para niños</div><div style="font-size:.5rem;font-family:'Work Sans';color:#ffbcbc">Cont. neto 500 g</div></div><p class="cap" style="max-width:220px"><b style="color:var(--bad)">Problemas</b>: 4 tipografías, el producto casi no se lee, la imagen muestra ahuyama (no corresponde), declaraciones sin respaldo, contenido neto ilegible.</p></div>
       <div class="figure"><div class="bag" style="--c:#4E8A2E"><div class="lg-row"><svg aria-hidden="true"><use href="#iso"/></svg>Cosecha Lista</div><div class="pname">Arveja con zanahoria</div><div class="desc">Pelada, cortada y escaldada</div><div class="art"><svg viewBox="0 0 120 90" aria-hidden="true"><use href="#art-arveja"/></svg></div><div class="foot"><span class="ben">Lista en 10 min</span><span class="net">500 g</span></div></div><p class="cap" style="max-width:220px"><b style="color:var(--ok)">Funciona</b>: el producto es lo más grande, una sola imagen fiel, un beneficio verificable y el contenido neto claro.</p></div>
     </div></div>
 
-  <div class="block"><h3>Paso a paso: desarrollar la parte posterior</h3>
+  <div class="block"><h3>Paso a paso: desarrollar la parte posterior</h3><p class="hint">Organiza el reverso: información obligatoria, preparación y conservación.</p>
     <div class="grid2">
       <div><ol class="steps">
         <li><div><b>Información del producto.</b><p class="how">Nombre y descripción del alimento.</p></div></li>
@@ -1456,13 +1459,13 @@ body.dl-on .dl-btn{display:inline-block}
       </div>
     </div></div>
 
-  <div class="block"><h3>Marketing frente a información obligatoria</h3>
+  <div class="block"><h3>Marketing frente a información obligatoria</h3><p class="hint">Distingue lo que decides tú de lo que la norma te exige poner.</p>
     <div class="compare">
       <div class="yes"><h4>Elementos de marketing (decides tú)</h4><p class="small">Logotipo, eslogan, ilustraciones, beneficios comerciales, historia de la marca, colores identificadores, recetas sugeridas, redes sociales.</p></div>
       <div class="yes" style="background:var(--frost-soft);border-color:var(--frost)"><h4 style="color:var(--frost-ink)">Información obligatoria (decide la norma)</h4><p class="small">Nombre del alimento, ingredientes, contenido neto, fabricante, lote, fechas, conservación, información nutricional, sellos de advertencia y registro sanitario cuando correspondan. No debe quedar escondida ni ser contradicha por el marketing.</p></div>
     </div></div>
 
-  <div class="block"><h3>Ejemplo resuelto</h3>
+  <div class="block"><h3>Ejemplo resuelto</h3><p class="hint">Mira cómo Marcela resolvió este paso en Cosecha Lista. Después harás lo mismo con tu negocio.</p>
     <div class="solved"><span class="stamp">Ejemplo resuelto · ficticio</span>
       <h4>Prototipo de «Mezcla para sudado» de Cosecha Lista</h4>
       <div class="grid2" style="align-items:start">
@@ -1480,22 +1483,22 @@ body.dl-on .dl-btn{display:inline-block}
       </div>
     </div></div>
 
-  <div class="block"><h3>Errores comunes</h3>
+  <div class="block"><h3>Errores comunes</h3><p class="hint">Revisa lo que suele salir mal en esta etapa para no repetirlo.</p>
     <div class="errors">
       <div class="err"><div><small>Error</small><span class="e">Saturar el empaque de información comercial</span></div><div><small>Por qué ocurre</small>Se quiere decir todo lo bueno del producto.</div><div><small>Cómo corregirlo</small>Un beneficio principal en el frente; el resto, en el reverso o en redes.</div></div>
       <div class="err"><div><small>Error</small><span class="e">No establecer jerarquía</span></div><div><small>Por qué ocurre</small>Todo parece importante.</div><div><small>Cómo corregirlo</small>Numera del 1 al 5 el orden de lectura antes de diseñar.</div></div>
       <div class="err"><div><small>Error</small><span class="e">Ignorar el almacenamiento congelado</span></div><div><small>Por qué ocurre</small>Se diseña en pantalla, a temperatura ambiente.</div><div><small>Cómo corregirlo</small>Prueba la bolsa impresa en el congelador: escarcha, condensación, arrugas.</div></div>
       <div class="err"><div><small>Error</small><span class="e">Diseñar sin el plano del proveedor</span></div><div><small>Por qué ocurre</small>Se diseña antes de cotizar.</div><div><small>Cómo corregirlo</small>Pide el troquel o plano técnico (medidas, zonas de sello, sangrado).</div></div>
     </div></div>
-  <div class="block"><h3>Recomendaciones prácticas</h3>
+  <div class="block"><h3>Recomendaciones prácticas</h3><p class="hint">Consejos cortos para tener a mano mientras trabajas.</p>
     <ul class="tips"><li><b>Pide el plano técnico</b> (llamado troquel o dieline) a tu proveedor antes de empezar.</li><li><b>Haz un prototipo casero</b>: imprime en papel adhesivo y pégalo sobre una bolsa con producto.</li><li><b>Deja una zona sin diseño</b> para lote y fecha: el fechador necesita un fondo claro y liso.</li><li><b>Fotografía tu prototipo en un congelador real</b> junto a productos de la competencia.</li></ul></div>
-  <div class="block"><h3>Actividad guiada</h3>
+  <div class="block"><h3>Actividad guiada</h3><p class="hint">Haz este ejercicio con tu propio negocio. Te deja listas las respuestas de la plantilla.</p>
     <div class="activity"><div class="meta"><span class="chip">6 a 8 horas</span><span class="chip">Canva + impresora</span><span class="chip">Bolsa real</span></div><p>Diseña un primer prototipo de empaque (frente y reverso) para tu producto principal siguiendo los pasos. Imprímelo a tamaño real, pruébalo congelado y revisa la lista de verificación de empaque.</p></div></div>
-  <div class="block"><h3>Plantilla para completar</h3><div class="tpl" data-tpl="t11"></div></div>
+  <div class="block"><h3>Plantilla para completar</h3><p class="hint">Escribe aquí tus respuestas. Se guardan en este navegador; al terminar, descarga la ficha y envíala.</p><div class="tpl" data-tpl="t11"></div></div>
   <div class="block"><div class="deliver"><svg aria-hidden="true"><use href="#i-box"/></svg><div><span class="eyebrow">Entregable del módulo</span><p>Prototipo frontal y posterior de un producto</p></div></div></div>
-  <div class="block"><h3>Lista de verificación antes de continuar</h3>
+  <div class="block"><h3>Lista de verificación antes de continuar</h3><p class="hint">Marca cada punto que ya cumples. Si falta alguno, vuelve a ese paso antes de avanzar.</p>
     <ul class="check" data-check="m10"><li>Tengo el plano técnico o las medidas reales del empaque.</li><li>Definí el orden de lectura del frente (1 a 5).</li><li>Separé marketing e información obligatoria en el reverso.</li><li>Probé el prototipo impreso y congelado.</li><li>Pedí al proveedor la ficha técnica del material para congelación.</li></ul></div>
-  <div class="block"><h3>Criterios para evaluar el resultado</h3>
+  <div class="block"><h3>Criterios para evaluar el resultado</h3><p class="hint">Compara tu entregable con estos criterios para saber si quedó bien hecho.</p>
     <div class="criteria"><div><b>Prueba de 3 segundos</b>Se entiende qué es, la marca y el contenido.</div><div><b>Honestidad</b>Imagen y mensajes corresponden al producto.</div><div><b>Funcionalidad</b>Resiste frío y deja espacio para lote y fecha.</div><div><b>Orden</b>La información obligatoria se encuentra fácilmente.</div></div></div>
 </section>
 
@@ -1510,7 +1513,7 @@ body.dl-on .dl-btn{display:inline-block}
     <div><b>Cómo sé si va bien</b>A 2 metros reconoces la marca y a 1 metro el producto.</div>
     <div><b>Qué debo terminar</b>Sistema de packaging con variaciones.</div>
   </div>
-  <div class="block"><h3>Conceptos fundamentales</h3>
+  <div class="block"><h3>Conceptos fundamentales</h3><p class="hint">Lee las definiciones clave del módulo. Las vas a usar al completar la plantilla.</p>
     <dl class="terms">
       <div class="term"><dt>Arquitectura de marca</dt><dd>La organización de productos y líneas bajo una marca.</dd><span class="ex">Cosecha Lista → línea «Básicos» y línea «Para recetas».</span></div>
       <div class="term"><dt>Referencia (SKU)</dt><dd>Cada producto distinto que vendes, incluido cada tamaño.</dd><span class="ex">Arveja 500 g y arveja 1 kg son dos referencias.</span></div>
@@ -1518,13 +1521,13 @@ body.dl-on .dl-btn{display:inline-block}
       <div class="term"><dt>Identificador de variedad</dt><dd>El elemento que cambia para distinguir productos.</dd><span class="ex">El color de fondo y la ilustración.</span></div>
     </dl></div>
 
-  <div class="block"><h3>Qué se mantiene y qué cambia</h3>
+  <div class="block"><h3>Qué se mantiene y qué cambia</h3><p class="hint">Define qué elementos son fijos en todos los empaques y cuáles cambian por producto.</p>
     <div class="compare">
       <div class="yes" style="background:var(--frost-soft);border-color:var(--frost)"><h4 style="color:var(--frost-ink)">Constante (identidad)</h4><p class="small">Logotipo y su posición · tipografías · estructura o retícula · estilo fotográfico o de ilustración · elementos de identidad (cápsula blanca, patrón) · ubicación del contenido neto y del beneficio.</p></div>
       <div class="yes"><h4>Variable (diferenciación)</h4><p class="small">Colores secundarios o de fondo · fotografías o ilustraciones · nombre del producto · identificadores de sabor o variedad · indicador de tamaño · color o etiqueta de la línea.</p></div>
     </div></div>
 
-  <div class="block"><h3>Paso a paso: construir la familia</h3>
+  <div class="block"><h3>Paso a paso: construir la familia</h3><p class="hint">Sigue los pasos para organizar tus productos, sabores y líneas.</p>
     <ol class="steps">
       <li><div><b>Lista todas tus referencias, presentes y futuras.</b><p class="how">Productos, tamaños, líneas. Diseñar pensando en 8 productos evita rehacer el sistema cuando tengas el quinto.</p></div></li>
       <li><div><b>Agrúpalas en líneas si hace falta.</b><p class="how">Por uso (básicos / recetas), por público o por categoría.</p></div></li>
@@ -1535,7 +1538,7 @@ body.dl-on .dl-btn{display:inline-block}
       <li><div><b>Haz la prueba de distancia.</b><p class="how">Imprime la familia y colócala junta: a 2 metros debe reconocerse la marca; a 1 metro, cada producto.</p></div></li>
     </ol></div>
 
-  <div class="block"><h3>Ejemplo resuelto</h3>
+  <div class="block"><h3>Ejemplo resuelto</h3><p class="hint">Mira cómo Marcela resolvió este paso en Cosecha Lista. Después harás lo mismo con tu negocio.</p>
     <div class="solved"><span class="stamp">Ejemplo resuelto · ficticio</span>
       <h4>Familia de empaques de Cosecha Lista</h4>
       <div class="shelf" style="margin:8px 0 12px">
@@ -1555,21 +1558,21 @@ body.dl-on .dl-btn{display:inline-block}
       <p class="why"><b>Qué observar:</b> el logotipo, la cápsula blanca, la tipografía, la posición del beneficio y del peso no cambian. Solo cambian el color, la ilustración y el nombre. El amarillo de la mazorca se oscureció respecto al de la paleta para que el texto blanco tenga contraste suficiente: un ajuste documentado, no una excepción caprichosa. Los tiempos de preparación son ficticios; en un caso real salen de pruebas de cocción.</p>
     </div></div>
 
-  <div class="block"><h3>Errores comunes</h3>
+  <div class="block"><h3>Errores comunes</h3><p class="hint">Revisa lo que suele salir mal en esta etapa para no repetirlo.</p>
     <div class="errors">
       <div class="err"><div><small>Error</small><span class="e">No diferenciar las referencias</span></div><div><small>Por qué ocurre</small>Se cambia solo el nombre en letra pequeña.</div><div><small>Cómo corregirlo</small>Usa al menos dos identificadores: color + ilustración.</div></div>
       <div class="err"><div><small>Error</small><span class="e">Cambiar la estructura en cada producto</span></div><div><small>Por qué ocurre</small>Cada diseño se hace en un momento distinto.</div><div><small>Cómo corregirlo</small>Usa una plantilla maestra en Canva y duplica.</div></div>
       <div class="err"><div><small>Error</small><span class="e">Colores de variedad demasiado parecidos</span></div><div><small>Por qué ocurre</small>Se eligen dentro de la misma gama.</div><div><small>Cómo corregirlo</small>Ve la familia en escala de grises: si dos se confunden, ajusta su luminosidad.</div></div>
     </div></div>
-  <div class="block"><h3>Recomendaciones prácticas</h3>
+  <div class="block"><h3>Recomendaciones prácticas</h3><p class="hint">Consejos cortos para tener a mano mientras trabajas.</p>
     <ul class="tips"><li><b>Crea una plantilla maestra bloqueada</b> en Canva con los elementos constantes, y duplica para cada referencia.</li><li><b>Reserva colores para el futuro</b>: anota qué colores usarás para los próximos productos.</li></ul></div>
-  <div class="block"><h3>Actividad guiada</h3>
+  <div class="block"><h3>Actividad guiada</h3><p class="hint">Haz este ejercicio con tu propio negocio. Te deja listas las respuestas de la plantilla.</p>
     <div class="activity"><div class="meta"><span class="chip">4 a 6 horas</span><span class="chip">Canva</span></div><p>Crea una familia de tres a cuatro empaques de tu marca usando la misma retícula. Completa la plantilla de arquitectura y haz la prueba de distancia.</p></div></div>
-  <div class="block"><h3>Plantilla para completar</h3><div class="tpl" data-tpl="t10"></div></div>
+  <div class="block"><h3>Plantilla para completar</h3><p class="hint">Escribe aquí tus respuestas. Se guardan en este navegador; al terminar, descarga la ficha y envíala.</p><div class="tpl" data-tpl="t10"></div></div>
   <div class="block"><div class="deliver"><svg aria-hidden="true"><use href="#i-box"/></svg><div><span class="eyebrow">Entregable del módulo</span><p>Sistema de packaging con variaciones</p></div></div></div>
-  <div class="block"><h3>Lista de verificación antes de continuar</h3>
+  <div class="block"><h3>Lista de verificación antes de continuar</h3><p class="hint">Marca cada punto que ya cumples. Si falta alguno, vuelve a ese paso antes de avanzar.</p>
     <ul class="check" data-check="m11"><li>Listé referencias presentes y futuras.</li><li>Definí elementos constantes y variables.</li><li>Diseñé 3 o 4 empaques con la misma retícula.</li><li>Hice la prueba de distancia y la de escala de grises.</li></ul></div>
-  <div class="block"><h3>Criterios para evaluar el resultado</h3>
+  <div class="block"><h3>Criterios para evaluar el resultado</h3><p class="hint">Compara tu entregable con estos criterios para saber si quedó bien hecho.</p>
     <div class="criteria"><div><b>Unidad</b>Se reconoce la marca en todos.</div><div><b>Diferenciación</b>Cada producto se identifica rápido.</div><div><b>Escalabilidad</b>El sistema admite nuevos productos sin rediseñar.</div></div></div>
 </section>
 
@@ -1584,13 +1587,13 @@ body.dl-on .dl-btn{display:inline-block}
     <div><b>Cómo sé si va bien</b>Alguien externo puede hacer un empaque nuevo solo con el manual.</div>
     <div><b>Qué debo terminar</b>Brand book en PDF.</div>
   </div>
-  <div class="block"><h3>Conceptos fundamentales</h3>
+  <div class="block"><h3>Conceptos fundamentales</h3><p class="hint">Lee las definiciones clave del módulo. Las vas a usar al completar la plantilla.</p>
     <dl class="terms">
       <div class="term"><dt>Manual de marca</dt><dd>Documento con las reglas de uso de la identidad verbal y visual.</dd><span class="ex">Un PDF de 15 a 30 páginas para un emprendimiento.</span></div>
       <div class="term"><dt>Usos permitidos</dt><dd>Versiones y combinaciones aprobadas.</dd><span class="ex">Logo blanco sobre verde huerta.</span></div>
       <div class="term"><dt>Usos incorrectos</dt><dd>Ejemplos visuales de lo que no se debe hacer.</dd><span class="ex">Deformar el logo o cambiar su tipografía.</span></div>
     </dl></div>
-  <div class="block"><h3>Paso a paso: las 16 secciones</h3>
+  <div class="block"><h3>Paso a paso: las 16 secciones</h3><p class="hint">Arma tu manual sección por sección con lo que hiciste en los módulos anteriores.</p>
     <div class="scroll ref"><table>
       <thead><tr><th>#</th><th>Sección</th><th>Qué incluir</th><th>Viene de</th></tr></thead>
       <tbody>
@@ -1618,7 +1621,7 @@ body.dl-on .dl-btn{display:inline-block}
       <li><div><b>Agrega ejemplos sí / no en cada regla.</b><p class="how">Una regla con ejemplo se entiende; una regla sin ejemplo se interpreta.</p></div></li>
       <li><div><b>Exporta en PDF</b> y prueba con alguien externo: pídele que diseñe una publicación de Instagram solo con el manual.</div></li>
     </ol></div>
-  <div class="block"><h3>Ejemplo resuelto</h3>
+  <div class="block"><h3>Ejemplo resuelto</h3><p class="hint">Mira cómo Marcela resolvió este paso en Cosecha Lista. Después harás lo mismo con tu negocio.</p>
     <div class="solved"><span class="stamp">Ejemplo resuelto · ficticio</span>
       <h4>Tres páginas del manual de Cosecha Lista</h4>
       <div class="grid3">
@@ -1628,20 +1631,20 @@ body.dl-on .dl-btn{display:inline-block}
       </div>
       <p class="why"><b>Qué observar:</b> cada página tiene una sola idea, usa la identidad de la marca y da una regla con un dato medible (tamaño mínimo, códigos, palabras sí/no).</p>
     </div></div>
-  <div class="block"><h3>Errores comunes</h3>
+  <div class="block"><h3>Errores comunes</h3><p class="hint">Revisa lo que suele salir mal en esta etapa para no repetirlo.</p>
     <div class="errors">
       <div class="err"><div><small>Error</small><span class="e">Manual sin ejemplos</span></div><div><small>Por qué ocurre</small>Se escriben solo reglas.</div><div><small>Cómo corregirlo</small>Cada regla con un ejemplo correcto y uno incorrecto.</div></div>
       <div class="err"><div><small>Error</small><span class="e">No actualizarlo</span></div><div><small>Por qué ocurre</small>Se hace una vez y se olvida.</div><div><small>Cómo corregirlo</small>Pon fecha y versión; actualízalo con cada producto nuevo.</div></div>
     </div></div>
-  <div class="block"><h3>Recomendaciones prácticas</h3>
+  <div class="block"><h3>Recomendaciones prácticas</h3><p class="hint">Consejos cortos para tener a mano mientras trabajas.</p>
     <ul class="tips"><li><b>Empieza pequeño:</b> un manual básico de 15 páginas útil es mejor que uno de 80 sin terminar.</li><li><b>Incluye los archivos:</b> enlace a una carpeta con logotipos, fuentes (o enlaces a Google Fonts) y plantillas.</li></ul></div>
-  <div class="block"><h3>Actividad guiada</h3>
+  <div class="block"><h3>Actividad guiada</h3><p class="hint">Haz este ejercicio con tu propio negocio. Te deja listas las respuestas de la plantilla.</p>
     <div class="activity"><div class="meta"><span class="chip">6 a 10 horas</span><span class="chip">Canva / Google Slides</span></div><p>Construye un manual básico de marca con las 16 secciones usando la plantilla siguiente como guion. Expórtalo en PDF y pruébalo con una persona externa.</p></div></div>
-  <div class="block"><h3>Plantilla para completar</h3><div class="tpl" data-tpl="t12"></div></div>
+  <div class="block"><h3>Plantilla para completar</h3><p class="hint">Escribe aquí tus respuestas. Se guardan en este navegador; al terminar, descarga la ficha y envíala.</p><div class="tpl" data-tpl="t12"></div></div>
   <div class="block"><div class="deliver"><svg aria-hidden="true"><use href="#i-box"/></svg><div><span class="eyebrow">Entregable del módulo</span><p>Brand book en PDF</p></div></div></div>
-  <div class="block"><h3>Lista de verificación antes de continuar</h3>
+  <div class="block"><h3>Lista de verificación antes de continuar</h3><p class="hint">Marca cada punto que ya cumples. Si falta alguno, vuelve a ese paso antes de avanzar.</p>
     <ul class="check" data-check="m12"><li>Las 16 secciones tienen contenido.</li><li>Cada regla tiene ejemplo sí / no.</li><li>El manual tiene fecha y versión.</li><li>Una persona externa lo usó con éxito.</li></ul></div>
-  <div class="block"><h3>Criterios para evaluar el resultado</h3>
+  <div class="block"><h3>Criterios para evaluar el resultado</h3><p class="hint">Compara tu entregable con estos criterios para saber si quedó bien hecho.</p>
     <div class="criteria"><div><b>Completitud</b>Cubre identidad verbal y visual.</div><div><b>Claridad</b>Reglas medibles y con ejemplos.</div><div><b>Aplicabilidad</b>Sirve a alguien que no conoce la marca.</div></div></div>
 </section>
 
@@ -1659,7 +1662,7 @@ body.dl-on .dl-btn{display:inline-block}
 
   <div class="note warn"><p><b>Aviso importante.</b> Este módulo es educativo y no sustituye una revisión regulatoria, técnica o sanitaria de tu producto y su etiqueta. Los requisitos cambian según el país, la categoría del alimento, su composición y el canal de venta, y las normas se modifican. No reproducimos artículos, umbrales ni porcentajes: consúltalos siempre en el texto oficial vigente. <b>Fecha de consulta de las fuentes: 25 de noviembre de 2026.</b></p></div>
 
-  <div class="block"><h3>Normas de referencia en Colombia <span class="tag">verificadas en fuentes oficiales</span></h3>
+  <div class="block"><h3>Normas de referencia en Colombia <span class="tag">verificadas en fuentes oficiales</span></h3><p class="hint">Conoce las normas que aplican a la etiqueta de un alimento congelado.</p>
     <div class="stack">
       <div class="card"><h4>Resolución 5109 de 2005 · Ministerio de la Protección Social</h4><p class="small">Reglamento técnico sobre los requisitos de rotulado o etiquetado de alimentos envasados y materias primas para consumo humano. Su artículo 4 fue modificado por la Resolución 557 de 2022, y la Resolución 2362 de 2023 determinó su permanencia como reglamento técnico vigente.<br><a href="https://normograma.invima.gov.co/normograma/compilacion/docs/resolucion_minproteccion_5109_2005.htm" target="_blank" rel="noopener">Texto en el normograma del INVIMA</a> · <a href="https://www.minsalud.gov.co/Normatividad_Nuevo/Resoluci%C3%B3n%20No.%20557%20de%20%202022.pdf" target="_blank" rel="noopener">Resolución 557 de 2022</a> · <a href="https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/DE/DIJ/resolucion-2362-de-2023.pdf" target="_blank" rel="noopener">Resolución 2362 de 2023</a></p></div>
       <div class="card"><h4>Resolución 810 de 2021 · Ministerio de Salud y Protección Social</h4><p class="small">Reglamento técnico de etiquetado nutricional y frontal de advertencia para alimentos envasados. Modificada por la Resolución 2492 de 2022 (que ajustó, entre otros, los artículos 2, 3, 16, 25, 32, 37 y 40) y corregida por la Resolución 254 de 2023.<br><a href="https://www.alcaldiabogota.gov.co/sisjur/normas/Norma1.jsp?i=113678&dt=S" target="_blank" rel="noopener">Resolución 810 de 2021</a> · <a href="https://normograma.invima.gov.co/normograma/compilacion/docs/resolucion_minsaludps_2492_2022.htm" target="_blank" rel="noopener">Resolución 2492 de 2022 (INVIMA)</a></p>
@@ -1669,7 +1672,7 @@ body.dl-on .dl-btn{display:inline-block}
       <div class="card"><h4>Referencia internacional: Codex Alimentarius CXS 1-1985</h4><p class="small">Norma general para el etiquetado de los alimentos preenvasados (FAO/OMS). Útil para entender conceptos; no reemplaza la norma colombiana.<br><a href="https://www.fao.org/fao-who-codexalimentarius/codex-texts/list-standards/es/" target="_blank" rel="noopener">Normas del Codex Alimentarius</a></p></div>
     </div></div>
 
-  <div class="block"><h3>Conceptos explicados de forma sencilla</h3>
+  <div class="block"><h3>Conceptos explicados de forma sencilla</h3><p class="hint">Lee qué significa cada término de la etiqueta antes de revisar la tuya.</p>
     <dl class="terms">
       <div class="term"><dt>Rótulo o etiqueta</dt><dd>Toda la información escrita, impresa o gráfica en el envase.</dd><span class="ex">Todo lo que está impreso en la bolsa.</span></div>
       <div class="term"><dt>Lista de ingredientes</dt><dd>Todos los ingredientes del producto. Según la Res. 5109 y el Codex, se declaran en orden decreciente de peso (de mayor a menor cantidad). Verifica la redacción exacta.</dd><span class="ex">«Papa criolla, zanahoria, arveja».</span></div>
@@ -1684,7 +1687,7 @@ body.dl-on .dl-btn{display:inline-block}
       <div class="term"><dt>Registro, permiso o notificación sanitaria</dt><dd>Autorización del INVIMA requerida según el riesgo del alimento (Res. 2674 de 2013).</dd><span class="ex">Prefijos RSA, PSA o NSA en la etiqueta.</span></div>
     </dl></div>
 
-  <div class="block"><h3>Cuatro tipos de requisitos: no todos aplican igual</h3>
+  <div class="block"><h3>Cuatro tipos de requisitos: no todos aplican igual</h3><p class="hint">Identifica cuáles requisitos aplican a tu producto y cuáles no.</p>
     <div class="grid2">
       <div class="card"><h4>1 · Requisitos generales</h4><p class="small">Aplican a los alimentos envasados en general (rotulado de la Res. 5109): nombre del alimento, lista de ingredientes, contenido neto, nombre y dirección del fabricante, envasador o importador, identificación del lote, marcado de fecha, instrucciones de conservación, instrucciones de uso cuando sean necesarias y número de registro, permiso o notificación sanitaria. <b>Confirma la lista y la redacción exacta en el artículo 5 vigente.</b></p></div>
       <div class="card"><h4>2 · Requisitos que dependen de la categoría</h4><p class="small">El tipo de autorización sanitaria depende del riesgo del alimento (Res. 2674). Carnes, productos de la pesca o comidas preparadas pueden tener exigencias distintas a las de frutas o verduras. Algunas categorías tienen reglamentos técnicos propios: búscalos para tu producto en el normograma del INVIMA.</p></div>
@@ -1692,13 +1695,13 @@ body.dl-on .dl-btn{display:inline-block}
       <div class="card"><h4>4 · Requisitos que debes validar con la autoridad</h4><p class="small">Si tu producto está exceptuado de algún requisito, qué autorización sanitaria necesitas, los umbrales vigentes, los plazos de transición de normas nuevas, los requisitos metrológicos del contenido neto y el registro de tu marca (SIC). Ante la duda, consulta al INVIMA o a un profesional en asuntos regulatorios.</p></div>
     </div></div>
 
-  <div class="block"><h3>Marketing frente a información obligatoria</h3>
+  <div class="block"><h3>Marketing frente a información obligatoria</h3><p class="hint">Distingue lo que decides tú de lo que la norma te exige poner.</p>
     <div class="compare">
       <div class="no"><h4><svg width="18" height="18"><use href="#i-x"/></svg>Problemático</h4><p class="small">«100% natural» en un producto con aditivos (la Res. 5109 lo restringe) · «Saludable» o «ideal para niños» sin respaldo · ilustraciones que tapan la tabla nutricional · beneficios en letra grande y advertencias escondidas.</p></div>
       <div class="yes"><h4><svg width="18" height="18"><use href="#i-check"/></svg>Responsable</h4><p class="small">Mensajes comerciales verificables («pelada y cortada») · información obligatoria en zonas limpias y legibles · espacio reservado para sellos frontales cuando apliquen · cada declaración respaldada por análisis o pruebas documentadas.</p></div>
     </div></div>
 
-  <div class="block"><h3>Paso a paso: analizar una etiqueta real</h3>
+  <div class="block"><h3>Paso a paso: analizar una etiqueta real</h3><p class="hint">Revisa una etiqueta punto por punto para encontrar lo que falta.</p>
     <ol class="steps">
       <li><div><b>Compra o fotografía un producto congelado de tu categoría.</b><p class="how">Toma fotos nítidas de todas sus caras.</p></div></li>
       <li><div><b>Marca con colores cada zona.</b><p class="how">Verde: información obligatoria. Naranja: marketing. Azul: uso y preparación.</p></div></li>
@@ -1708,7 +1711,7 @@ body.dl-on .dl-btn{display:inline-block}
       <li><div><b>Compara con tu producto.</b><p class="how">¿Tu formulación es igual? ¿Qué cambiaría en tu caso? Anota tus dudas para consultarlas.</p></div></li>
     </ol></div>
 
-  <div class="block"><h3>Ejemplo resuelto</h3>
+  <div class="block"><h3>Ejemplo resuelto</h3><p class="hint">Mira cómo Marcela resolvió este paso en Cosecha Lista. Después harás lo mismo con tu negocio.</p>
     <div class="solved"><span class="stamp">Ejemplo resuelto · ficticio</span>
       <h4>Lista preliminar de Marcela para «Mezcla para sudado»</h4>
       <div class="scroll ref"><table>
@@ -1729,22 +1732,22 @@ body.dl-on .dl-btn{display:inline-block}
       <p class="why"><b>Qué observar:</b> Marcela no inventa requisitos ni valores: separa lo que tiene, lo que debe medir y lo que debe consultar. Esa honestidad es la que necesitas en tu propia lista.</p>
     </div></div>
 
-  <div class="block"><h3>Errores comunes</h3>
+  <div class="block"><h3>Errores comunes</h3><p class="hint">Revisa lo que suele salir mal en esta etapa para no repetirlo.</p>
     <div class="errors">
       <div class="err"><div><small>Error</small><span class="e">Diseñar la etiqueta sin revisar requisitos</span></div><div><small>Por qué ocurre</small>Se cree que es un trámite final.</div><div><small>Cómo corregirlo</small>Revisa la norma antes de diseñar el reverso; la información obligatoria ocupa espacio.</div></div>
       <div class="err"><div><small>Error</small><span class="e">Declaraciones sin respaldo</span></div><div><small>Por qué ocurre</small>«Todos lo dicen».</div><div><small>Cómo corregirlo</small>Solo usa frases que cumplan las condiciones de la norma y que puedas demostrar.</div></div>
       <div class="err"><div><small>Error</small><span class="e">Copiar la tabla nutricional de otra marca</span></div><div><small>Por qué ocurre</small>Parece el mismo producto.</div><div><small>Cómo corregirlo</small>Tu producto, tu análisis. La variedad, el corte y el proceso cambian los valores.</div></div>
       <div class="err"><div><small>Error</small><span class="e">Usar una lista genérica para todo</span></div><div><small>Por qué ocurre</small>Es más rápido.</div><div><small>Cómo corregirlo</small>Clasifica cada requisito en uno de los cuatro tipos y valida los de tipo 2, 3 y 4.</div></div>
     </div></div>
-  <div class="block"><h3>Recomendaciones prácticas</h3>
+  <div class="block"><h3>Recomendaciones prácticas</h3><p class="hint">Consejos cortos para tener a mano mientras trabajas.</p>
     <ul class="tips"><li><b>Consulta el normograma del INVIMA</b>: presenta las normas compiladas con sus modificaciones.</li><li><b>Imprime pocas bolsas al principio</b>: si la norma cambia o un dato estaba mal, perderás menos.</li><li><b>Guarda evidencia</b>: análisis, pruebas de cocción, fichas técnicas. Respaldan lo que dice tu etiqueta.</li></ul></div>
-  <div class="block"><h3>Actividad guiada</h3>
+  <div class="block"><h3>Actividad guiada</h3><p class="hint">Haz este ejercicio con tu propio negocio. Te deja listas las respuestas de la plantilla.</p>
     <div class="activity"><div class="meta"><span class="chip">2 a 3 horas</span><span class="chip">Un producto real</span></div><p>Analiza una etiqueta real de un producto congelado e identifica sus elementos con los 6 pasos. Después completa la lista preliminar de verificación para tu propio producto, marcando el estado de cada elemento.</p></div></div>
-  <div class="block"><h3>Plantilla para completar</h3><div class="tpl" data-tpl="t13"></div></div>
+  <div class="block"><h3>Plantilla para completar</h3><p class="hint">Escribe aquí tus respuestas. Se guardan en este navegador; al terminar, descarga la ficha y envíala.</p><div class="tpl" data-tpl="t13"></div></div>
   <div class="block"><div class="deliver"><svg aria-hidden="true"><use href="#i-box"/></svg><div><span class="eyebrow">Entregable del módulo</span><p>Lista de verificación preliminar de etiquetado</p></div></div></div>
-  <div class="block"><h3>Lista de verificación antes de continuar</h3>
+  <div class="block"><h3>Lista de verificación antes de continuar</h3><p class="hint">Marca cada punto que ya cumples. Si falta alguno, vuelve a ese paso antes de avanzar.</p>
     <ul class="check" data-check="m13"><li>Analicé una etiqueta real con colores por zona.</li><li>Consulté las normas en fuentes oficiales y anoté la fecha.</li><li>Revisé el estado del proyecto que reemplazaría la Res. 810.</li><li>Clasifiqué cada requisito en uno de los 4 tipos.</li><li>Tengo una lista de preguntas para INVIMA o un asesor.</li></ul></div>
-  <div class="block"><h3>Criterios para evaluar el resultado</h3>
+  <div class="block"><h3>Criterios para evaluar el resultado</h3><p class="hint">Compara tu entregable con estos criterios para saber si quedó bien hecho.</p>
     <div class="criteria"><div><b>Rigor</b>Cada requisito tiene fuente o está marcado por validar.</div><div><b>Especificidad</b>La lista corresponde a tu producto y formulación.</div><div><b>Responsabilidad</b>No hay declaraciones sin respaldo.</div></div></div>
 </section>
 
@@ -1759,7 +1762,7 @@ body.dl-on .dl-btn{display:inline-block}
     <div><b>Cómo sé si va bien</b>Cada decisión visual se explica con una decisión estratégica.</div>
     <div><b>Qué debo terminar</b>Presentación integral de la marca.</div>
   </div>
-  <div class="block"><h3>Paso a paso: estructura de la presentación</h3>
+  <div class="block"><h3>Paso a paso: estructura de la presentación</h3><p class="hint">Arma tu presentación final en este orden, del problema al empaque.</p>
     <div class="scroll ref"><table>
       <thead><tr><th>Diapositiva</th><th>Contenido</th><th>Entregable de origen</th></tr></thead>
       <tbody>
@@ -1787,7 +1790,7 @@ body.dl-on .dl-btn{display:inline-block}
       <li><div><b>Ensaya en 10 minutos</b> y pide a alguien que te evalúe con la rúbrica.</div></li>
     </ol></div>
 
-  <div class="block"><h3>Ejemplo resuelto</h3>
+  <div class="block"><h3>Ejemplo resuelto</h3><p class="hint">Mira cómo Marcela resolvió este paso en Cosecha Lista. Después harás lo mismo con tu negocio.</p>
     <div class="solved"><span class="stamp">Ejemplo resuelto · ficticio</span>
       <h4>La evolución de Cosecha Lista en una diapositiva</h4>
       <div class="diagram" style="background:#fff;border-color:#2E6B3F"><svg viewBox="0 0 760 170" role="img" aria-label="Línea de decisiones de Cosecha Lista">
@@ -1802,23 +1805,23 @@ body.dl-on .dl-btn{display:inline-block}
         </g></svg></div>
     </div></div>
 
-  <div class="block"><h3>Rúbrica de evaluación <span class="tag">interactiva · evalúa proceso y resultado</span></h3>
+  <div class="block"><h3>Rúbrica de evaluación <span class="tag">interactiva · evalúa proceso y resultado</span></h3><p class="hint">Califica tu proyecto con esta rúbrica para ver qué está listo y qué mejorar.</p>
     <p class="small muted" style="margin-bottom:10px">Niveles: <b>1 Inicial</b> (falta o es genérico) · <b>2 En desarrollo</b> (existe pero sin justificación o evidencia) · <b>3 Logrado</b> (cumple la descripción) · <b>4 Destacado</b> (cumple y además está probado con clientes o en contexto real).</p>
     <div class="tpl" data-tpl="t14"></div></div>
 
-  <div class="block"><h3>Errores comunes</h3>
+  <div class="block"><h3>Errores comunes</h3><p class="hint">Revisa lo que suele salir mal en esta etapa para no repetirlo.</p>
     <div class="errors">
       <div class="err"><div><small>Error</small><span class="e">Presentar solo lo bonito</span></div><div><small>Por qué ocurre</small>Se cree que el diseño habla solo.</div><div><small>Cómo corregirlo</small>Muestra la investigación y la estrategia que lo justifican.</div></div>
       <div class="err"><div><small>Error</small><span class="e">Contradicciones entre módulos</span></div><div><small>Por qué ocurre</small>Las decisiones cambiaron y no se actualizó todo.</div><div><small>Cómo corregirlo</small>Revisa que nombre, colores y mensajes coincidan en todas las diapositivas.</div></div>
     </div></div>
-  <div class="block"><h3>Recomendaciones prácticas</h3>
+  <div class="block"><h3>Recomendaciones prácticas</h3><p class="hint">Consejos cortos para tener a mano mientras trabajas.</p>
     <ul class="tips"><li><b>Lleva el prototipo físico</b> a la presentación: nada convence más que la bolsa en la mano.</li><li><b>Cierra con próximos pasos concretos</b>: cotizaciones, registro de marca, análisis de laboratorio, primera producción.</li></ul></div>
-  <div class="block"><h3>Actividad guiada</h3>
+  <div class="block"><h3>Actividad guiada</h3><p class="hint">Haz este ejercicio con tu propio negocio. Te deja listas las respuestas de la plantilla.</p>
     <div class="activity"><div class="meta"><span class="chip">6 a 8 horas</span><span class="chip">Canva / Google Slides / PowerPoint</span></div><p>Construye la presentación de 16 diapositivas, ensáyala y autoevalúate (o pide a alguien que te evalúe) con la rúbrica. Corrige los criterios con puntaje menor a 3.</p></div></div>
   <div class="block"><div class="deliver"><svg aria-hidden="true"><use href="#i-box"/></svg><div><span class="eyebrow">Entregable final</span><p>Presentación integral de la marca y su sistema de identidad visual</p></div></div></div>
-  <div class="block"><h3>Lista de verificación final</h3>
+  <div class="block"><h3>Lista de verificación final</h3><p class="hint">Marca cada punto para confirmar que tu proyecto está completo.</p>
     <ul class="check" data-check="m14"><li>La presentación incluye las 16 secciones.</li><li>Cada decisión visual tiene su «porque».</li><li>No hay contradicciones de nombre, color o mensaje.</li><li>Incluí la evolución antes / después.</li><li>Me evalué con la rúbrica y corregí lo que estaba por debajo de 3.</li></ul></div>
-  <div class="block"><h3>Criterios para evaluar el resultado</h3>
+  <div class="block"><h3>Criterios para evaluar el resultado</h3><p class="hint">Compara tu entregable con estos criterios para saber si quedó bien hecho.</p>
     <div class="criteria"><div><b>Integralidad</b>Estrategia, identidad, empaque y etiquetado presentes.</div><div><b>Coherencia</b>El caso se sigue de principio a fin.</div><div><b>Preparación comercial</b>Próximos pasos claros y realistas.</div></div></div>
 </section>
 
@@ -1918,7 +1921,7 @@ body.dl-on .dl-btn{display:inline-block}
 <!-- ============ ANEXO D ============ -->
 <section class="mod" id="fuentes">
   <div class="modhead"><div class="modnum">D</div><div><span class="eyebrow">Anexo</span><h2>Fuentes y bibliografía</h2><p class="objective">Las fuentes normativas están separadas de las de formación e inspiración. Fecha de consulta de los enlaces normativos: 25 de noviembre de 2026. Los libros se enlazan a su ficha en Open Library para que puedas ubicar ediciones; verifica la edición disponible en tu biblioteca o librería.</p></div></div>
-  <div class="block"><h3>Fuentes normativas y oficiales</h3>
+  <div class="block"><h3>Fuentes normativas y oficiales</h3><p class="hint">Consulta aquí las normas originales cuando necesites verificar un requisito.</p>
     <ul class="src">
       <li><span class="k">Ministerio de la Protección Social.</span> Resolución 5109 de 2005, reglamento técnico de rotulado de alimentos envasados. <a href="https://normograma.invima.gov.co/normograma/compilacion/docs/resolucion_minproteccion_5109_2005.htm" target="_blank" rel="noopener">Normograma INVIMA</a> · Tema: rotulado general (M10, M13).</li>
       <li><span class="k">Ministerio de Salud y Protección Social.</span> Resolución 557 de 2022 (modifica art. 4 de la Res. 5109). <a href="https://www.minsalud.gov.co/Normatividad_Nuevo/Resoluci%C3%B3n%20No.%20557%20de%20%202022.pdf" target="_blank" rel="noopener">PDF Minsalud</a> · Tema: rotulado.</li>
@@ -1933,7 +1936,7 @@ body.dl-on .dl-btn{display:inline-block}
       <li><span class="k">FAO / OMS, Codex Alimentarius.</span> CXS 1-1985, Norma general para el etiquetado de los alimentos preenvasados. <a href="https://www.fao.org/fao-who-codexalimentarius/codex-texts/list-standards/es/" target="_blank" rel="noopener">Listado de normas</a> · Referencia internacional.</li>
       <li><span class="k">W3C.</span> Web Content Accessibility Guidelines (WCAG) 2.2, criterio de contraste. <a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener">w3.org/TR/WCAG22</a> · Tema: contraste (M7).</li>
     </ul></div>
-  <div class="block"><h3>Formación e inspiración</h3>
+  <div class="block"><h3>Formación e inspiración</h3><p class="hint">Libros y recursos para seguir aprendiendo sobre marca y diseño.</p>
     <ul class="src">
       <li><span class="k">Alina Wheeler.</span> <i>Designing Brand Identity</i>. Wiley (varias ediciones). <a href="https://openlibrary.org/search?q=Designing+Brand+Identity+Wheeler" target="_blank" rel="noopener">Open Library</a> · Proceso completo de identidad (M1, M6, M12).</li>
       <li><span class="k">Marty Neumeier.</span> <i>The Brand Gap</i>. New Riders, 2005 (ed. revisada). <a href="https://openlibrary.org/search?q=The+Brand+Gap+Neumeier" target="_blank" rel="noopener">Open Library</a> · Qué es una marca (M1).</li>
