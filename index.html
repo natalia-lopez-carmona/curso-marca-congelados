@@ -367,7 +367,7 @@ footer{margin-top:50px;padding:20px;border:2px solid var(--ink);border-radius:18
 @media (max-width:760px){.board{grid-template-columns:minmax(0,1fr)}.board>div{grid-column:auto!important}}
 .board-tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:16px}
 /* contacto */
-.contact-card{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center;background:var(--blue);color:#fff;border:3px solid var(--ink);border-radius:28px;padding:34px 30px;box-shadow:8px 8px 0 var(--ink);position:relative;overflow:hidden}
+.contact-card{display:grid;grid-template-columns:minmax(0,1fr);gap:24px;align-items:center;background:var(--blue);color:#fff;border:3px solid var(--ink);border-radius:28px;padding:34px 30px;box-shadow:8px 8px 0 var(--ink);position:relative;overflow:hidden}
 .contact-card::after{content:"";position:absolute;left:-40px;bottom:-50px;width:170px;height:170px;border-radius:50%;background:radial-gradient(#fff 1.8px,transparent 2px) 0 0/13px 13px;opacity:.3}
 .contact-card h2{margin:16px 0 10px;color:#fff}
 .contact-card p{max-width:56ch;position:relative;z-index:1}
@@ -378,8 +378,7 @@ footer{margin-top:50px;padding:20px;border:2px solid var(--ink);border-radius:18
 .cc-btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
 .cc-btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
 .cc-url{margin-top:12px;font-size:.84rem;opacity:.9}
-.cc-badge{width:150px;height:150px;border-radius:50%;background:var(--red);border:3px solid var(--ink);box-shadow:5px 5px 0 var(--ink);display:flex;align-items:center;justify-content:center;text-align:center;transform:rotate(10deg);font-weight:800;text-transform:uppercase;font-size:.85rem;line-height:1.15}
-@media (max-width:640px){.contact-card{grid-template-columns:minmax(0,1fr);padding:28px 20px}.cc-badge{display:none}}
+@media (max-width:640px){.contact-card{grid-template-columns:minmax(0,1fr);padding:28px 20px}}
 .dl-btn{display:none}
 body.dl-on .dl-btn{display:inline-block}
 .restore{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.86rem;border:2px dashed var(--ink);border-radius:99px;padding:8px 16px;background:var(--surface);cursor:pointer}
@@ -1850,7 +1849,6 @@ body.dl-on .dl-btn{display:inline-block}
       </div>
       <p class="cc-url">linkedin.com/in/natalia-lopez-carmona</p>
     </div>
-    <div class="cc-badge" aria-hidden="true"><span>Diseño<br>con<br>propósito</span></div>
   </div>
 </section>
 
